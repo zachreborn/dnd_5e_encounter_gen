@@ -17,27 +17,26 @@ encounter_table = {
 }
 
 
-# Function which takes the party size, average party level, and desired difficulty to return the correct XP budget
-# within the encounter_table dictionary
 def xp_budget(party_size, party_level, difficulty):
-    if party_level > 20:                            # currently no data for levels > 20
-        return 'Party level should not exceed 20, please enter an average party level between 1 and 20.'
-    elif party_level <= 0 or party_size <= 0:       # need sanity check that input is > 0
-        return 'Party level should be between 1 and 20, while party size should be 1 or greater.'
-    else:
-        return (encounter_table[difficulty.lower()][party_level - 1]) * party_size
+    """Function which takes the party size, average party level, and desired difficulty to return the correct XP budget
+    within the encounter_table dictionary.
+    """
+    if party_level > 20 or party_level < 1 or party_size < 1:
+        raise AssertionError('Party level should be between 1 and 20, while party size should be 1 or greater.')
+    return (encounter_table[difficulty][party_level - 1]) * party_size
 
 
-# Function to find factors of the XP budget integer
 def xp_list_gen(xp):
+    """Function to find factors of the XP budget integer."""
     # TODO return the random factor but also how many times said factor goes in so we know how many creatures to use
     random_gen_factor = random.choice([i for i in range(2, int(xp * 0.5) + 1) if xp % i == 0])
     return int(xp / random_gen_factor), random_gen_factor
 
 
-# Function to return list of monsters for an encounter that have the XP value input
 def build_encounter(xp):
-    # List comprehension. Insert key into list so long as XP is equal to key value at index 2
+    """Function to return list of monsters for an encounter that have the XP value input
+    List comprehension. Insert key into list so long as XP is equal to key value at index 2
+    """
     # TODO this also needs to spit out n, where == n * factor = xp
     return random.choice([key for key, val in monsters_by_challenge_rating.cr_dict.items() if val[2] == xp])
 
@@ -48,7 +47,7 @@ def build_encounter(xp):
 # TODO Better input sanitation
 party_size_input = int(input('Party size?\n'))
 party_level_input = int(input('Party average level?\n'))
-difficulty_input = str(input('Select difficulty:\nEasy, Medium, Hard, or Deadly\n'))
+difficulty_input = str.lower(input('Select difficulty:\nEasy, Medium, Hard, or Deadly\n'))
 
 
 ########################################################################################################################

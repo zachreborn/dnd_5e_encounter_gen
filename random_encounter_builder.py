@@ -22,14 +22,14 @@ def xp_budget(party_size, party_level, difficulty):
     within the encounter_table dictionary.
     """
     if party_level > 20 or party_level < 1 or party_size < 1:
-        raise AssertionError('Party level should be between 1 and 20, while party size should be 1 or greater.')
+        raise ValueError('Party level should be between 1 and 20, while party size should be 1 or greater.')
     return (encounter_table[difficulty][party_level - 1]) * party_size
 
 
 def xp_list_gen(xp):
     """Function to find factors of the XP budget integer. Output is X * factor
     """
-    random_gen_factor = random.choice([i for i in range(2, int(xp * 0.5) + 1) if xp % i == 0])
+    random_gen_factor = random.choice([i for i in range(10, xp + 1) if xp % i == 0])
     return int(xp / random_gen_factor), random_gen_factor
 
 
@@ -41,13 +41,33 @@ def build_encounter(xp):
     return random.choice([key for key, val in monsters.cr_dict.items() if val[2] == nearest_monster_xp])
 
 
+def get_user_input_str(prompt, choices=None):
+    result = None
+    while result is None:
+        val = input(prompt).lower()
+        if choices and val not in choices:
+            print(' Error: must choose one: {0}'.format(choices,))
+        else:
+            result = val
+    return result
+
+
+def get_user_input_int(prompt):
+    result = None
+    while result is None:
+        try:
+            result = int(input(prompt))
+        except ValueError:
+            print(' not an integer, try again...')
+    return result
+
+
 ########################################################################################################################
 # Define encounter variables via user input
-# TODO Might want to separate these out into their own functions and set the variables equal to that function.
-# TODO Better input sanitation
-party_size_input = int(input('Party size?\n'))
-party_level_input = int(input('Party average level?\n'))
-difficulty_input = str.lower(input('Select difficulty:\nEasy, Medium, Hard, or Deadly\n'))
+party_size_input = get_user_input_int('Party size? > ')
+party_level_input = get_user_input_int('Party average level? > ')
+difficulty_input = get_user_input_str('Select difficulty:\nEasy, Medium, Hard, or Deadly > ',
+                                      choices=['easy', 'medium', 'hard', 'deadly'])
 
 
 ########################################################################################################################
@@ -57,8 +77,8 @@ xp_per_monster = xp_list_gen(encounter_xp)
 output_monster = build_encounter(xp_per_monster[1])
 
 
-print('Randomized encounter based on:\n'
-      'Party Size: {0}\n'
-      'Party Level: {1}\n'
+print('Randomized encounter based on:\nParty Size: {0}\nParty Level: {1}\n'
       'Difficulty: {2}\n'
-      '{3}x {4}'.format(party_size_input, party_level_input, difficulty_input, xp_per_monster[0], output_monster))
+      '{3}x {4}(s) found on Monster Manual page: {5}'.format(
+          party_size_input, party_level_input, difficulty_input,
+          xp_per_monster[0], output_monster, monsters.cr_dict[output_monster][0]))

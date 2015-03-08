@@ -1,9 +1,8 @@
 # Monsters by CR
 # 'Monster Name': [Monster Manual Page, 'Challenge Rating number', Experience Points]
 # 'Key'         :   [0],                            [1],                    [2]
-# CR 0 is 0 through 10 XP
 cr_dict = {
-    # CR 0 is 0 through 10 XP
+    # CR 0 is 10 XP
     'Awakened shrub': [317, '0', 10],
     'Baboon': [318, '0', 10],
     'Badger': [318, '0', 10],

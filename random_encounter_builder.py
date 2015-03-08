@@ -27,16 +27,14 @@ def xp_budget(party_size, party_level, difficulty):
 
 
 def xp_list_gen(xp):
-    """Function to find factors of the XP budget integer. Output is X * factor
-    """
+    """Function to find factors of the XP budget integer. Returns a random factor and its pair (pair, factor)."""
+    # TODO factor pair should not be > 20 as dealing with more than 20 monsters is nearly impossible in D&D
     random_gen_factor = random.choice([i for i in range(10, xp + 1) if xp % i == 0])
     return int(xp / random_gen_factor), random_gen_factor
 
 
 def build_encounter(xp):
-    """Function to return list of monsters for an encounter that have the XP value input
-    List comprehension. Insert key into list so long as XP is equal to key value at index 2
-    """
+    """Function to return list of monsters for an encounter that have the XP nearest value input without going over."""
     nearest_monster_xp = min([val[2] for val in monsters.cr_dict.values() if val[2] <= xp], key=lambda x: abs(x - xp))
     return random.choice([key for key, val in monsters.cr_dict.items() if val[2] == nearest_monster_xp])
 

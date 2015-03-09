@@ -31,7 +31,7 @@ def xp_list_gen(xp):
      so long as that factor pairing is < 30.
      """
     random_gen_factor = 0
-    while random_gen_factor == 0 or xp / xp > 30:
+    while random_gen_factor == 0 or xp / random_gen_factor > 30:
         random_gen_factor = random.choice([i for i in range(10, xp + 1) if xp % i == 0])
     return int(xp / random_gen_factor), random_gen_factor
 

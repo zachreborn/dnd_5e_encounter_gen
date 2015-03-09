@@ -64,23 +64,24 @@ def get_user_input_int(prompt):
 
 
 ########################################################################################################################
-# Define encounter variables via user input
-party_size_input = get_user_input_int('Party size? > ')
-party_level_input = get_user_input_int('Party average level? > ')
-difficulty_input = get_user_input_str('Select difficulty:\nEasy, Medium, Hard, or Deadly > ',
-                                      choices=['easy', 'medium', 'hard', 'deadly'])
+# Define encounter variables via user input. Loop through input and output until CTRL-C is entered
+script_repeat = 'y'
+while script_repeat == 'y':
+    party_size_input = get_user_input_int('Party size? > ')
+    party_level_input = get_user_input_int('Party average level? > ')
+    difficulty_input = get_user_input_str('Select difficulty:\nEasy, Medium, Hard, or Deadly > ',
+                                          choices=['easy', 'medium', 'hard', 'deadly'])
 
 
 ########################################################################################################################
 # Define run variables to output data
-encounter_xp = xp_budget(party_size_input, party_level_input, difficulty_input)
-xp_per_monster = xp_list_gen(encounter_xp)
-output_monster = build_encounter(xp_per_monster[1])
+    encounter_xp = xp_budget(party_size_input, party_level_input, difficulty_input)
+    xp_per_monster = xp_list_gen(encounter_xp)
+    output_monster = build_encounter(xp_per_monster[1])
 
-
-# TODO add cycle effect so you can continually iterate your random selection based on random factor already generated
-print('Randomized encounter based on:\nParty Size: {0}\nParty Level: {1}\n'
-      'Difficulty: {2}\n'
-      '{3}x {4}(s) found on Monster Manual page: {5}'.format(
-          party_size_input, party_level_input, difficulty_input,
-          xp_per_monster[0], output_monster, monsters.cr_dict[output_monster][0]))
+    print('Randomized encounter based on:\nParty Size: {0}\nParty Level: {1}\n'
+          'Difficulty: {2}\n'
+          '{3}x {4}(s) found on Monster Manual page: {5}'.format(
+              party_size_input, party_level_input, difficulty_input,
+              xp_per_monster[0], output_monster, monsters.cr_dict[output_monster][0]))
+    script_repeat = get_user_input_str('Run again? Y/N > ', choices=['y', 'n'])

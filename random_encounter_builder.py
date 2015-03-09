@@ -27,9 +27,12 @@ def xp_budget(party_size, party_level, difficulty):
 
 
 def xp_list_gen(xp):
-    """Function to find factors of the XP budget integer. Returns a random factor and its pair (pair, factor)."""
-    # TODO factor pair should not be > 20 as dealing with more than 20 monsters is nearly impossible in D&D
-    random_gen_factor = random.choice([i for i in range(10, xp + 1) if xp % i == 0])
+    """Function to find factors of the XP budget integer. Returns a random factor and its pair (pair, factor),
+     so long as that factor pairing is < 30.
+     """
+    random_gen_factor = 0
+    while random_gen_factor == 0 or xp / xp > 30:
+        random_gen_factor = random.choice([i for i in range(10, xp + 1) if xp % i == 0])
     return int(xp / random_gen_factor), random_gen_factor
 
 

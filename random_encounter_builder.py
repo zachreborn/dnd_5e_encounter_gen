@@ -64,7 +64,7 @@ def get_user_input_int(prompt):
 
 
 ########################################################################################################################
-# Define encounter variables via user input. Loop through input and output until CTRL-C is entered
+# Define encounter variables via user input. Loop through input and output until N is entered or CTRL-C is pressed.
 script_repeat = 'y'
 while script_repeat == 'y':
     party_size_input = get_user_input_int('Party size? > ')

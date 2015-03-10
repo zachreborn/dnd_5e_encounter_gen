@@ -67,9 +67,9 @@ def get_user_input_int(prompt):
 # Define encounter variables via user input. Loop through input and output until N is entered or CTRL-C is pressed.
 script_repeat = 'y'
 while script_repeat == 'y':
-    party_size_input = get_user_input_int('Party size? > ')
-    party_level_input = get_user_input_int('Party average level? > ')
-    difficulty_input = get_user_input_str('Select difficulty:\nEasy, Medium, Hard, or Deadly > ',
+    party_size_input = get_user_input_int('Party size?> ')
+    party_level_input = get_user_input_int('Party average level?> ')
+    difficulty_input = get_user_input_str('Select difficulty:\nEasy, Medium, Hard, or Deadly> ',
                                           choices=['easy', 'medium', 'hard', 'deadly'])
 
 
@@ -84,4 +84,4 @@ while script_repeat == 'y':
           '{3}x {4}(s) found on Monster Manual page: {5}'.format(
               party_size_input, party_level_input, difficulty_input,
               xp_per_monster[0], output_monster, monsters.cr_dict[output_monster][0]))
-    script_repeat = get_user_input_str('Run again? Y/N > ', choices=['y', 'n'])
+    script_repeat = get_user_input_str('Run again? Y/N> ', choices=['y', 'n'])

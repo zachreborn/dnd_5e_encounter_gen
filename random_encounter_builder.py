@@ -16,7 +16,7 @@ encounter_table = {
                3600, 4500, 5100, 5700, 6400, 7200, 8800, 9500, 10900, 12700],
 }
 
-# TODO if party < 3 cycle up one index in the multiplier list
+
 # Encounter multiplier table based on number of monsters
 # 1 monster, 2 monsters, 3-6 monsters, 7-10 monsters, 11-14 monsters, 15+ monsters
 encounter_multiplier = [1.0, 0.67, 0.50, 0.40, 0.33, 0.25]
@@ -30,26 +30,28 @@ def xp_budget(party_size, party_level, difficulty):
         raise ValueError('Party level should be between 1 and 20, while party size should be 1 or greater.')
     return (encounter_table[difficulty][party_level - 1]) * party_size
 
-# TODO input party_size here to modify the encounter_multiplier list
-def xp_list_gen(xp):
+
+def xp_list_gen(xp, party_size):
     """Function to find factors of the XP budget integer. Returns a random factor and its pair (pair, factor),
      so long as that factor pairing is < 30.
      """
+    modifier = 0
+    if party_size <= 2:
+        modifier = 1
     random_gen_factor = 0
     while random_gen_factor == 0 or (xp / random_gen_factor) > 30:
         random_gen_factor = random.choice([i for i in range(10, xp + 1) if xp % i == 0])
-    # TODO make this multiplier an iterative cycle through the encounter_multiplier list
     if int(xp / random_gen_factor) >= 15:
         return int((xp / random_gen_factor) * encounter_multiplier[5]), random_gen_factor
     elif int(xp / random_gen_factor) >= 11 <= 14:
-        return int((xp / random_gen_factor) * encounter_multiplier[4]), random_gen_factor
+        return int((xp / random_gen_factor) * encounter_multiplier[4 + modifier]), random_gen_factor
     elif int(xp / random_gen_factor) >= 7 <= 10:
-        return int((xp / random_gen_factor) * encounter_multiplier[3]), random_gen_factor
+        return int((xp / random_gen_factor) * encounter_multiplier[3 + modifier]), random_gen_factor
     elif int(xp / random_gen_factor) >= 3 <= 6:
-        return int((xp / random_gen_factor) * encounter_multiplier[2]), random_gen_factor
+        return int((xp / random_gen_factor) * encounter_multiplier[2 + modifier]), random_gen_factor
     elif int(xp / random_gen_factor) == 2:
-        return int((xp / random_gen_factor) * encounter_multiplier[1]), random_gen_factor
-    return int(xp / random_gen_factor), random_gen_factor
+        return int((xp / random_gen_factor) * encounter_multiplier[1 + modifier]), random_gen_factor
+    return int((xp / random_gen_factor) * encounter_multiplier[0]), random_gen_factor
 
 
 def build_encounter(xp):
@@ -92,7 +94,7 @@ while script_repeat == 'y':
 ########################################################################################################################
 # Define run variables to output data
     encounter_xp = xp_budget(party_size_input, party_level_input, difficulty_input)
-    xp_per_monster = xp_list_gen(encounter_xp)
+    xp_per_monster = xp_list_gen(encounter_xp, party_size_input)
     output_monster = build_encounter(xp_per_monster[1])
 
     print('Randomized encounter based on:\nParty Size: {0}\nParty Level: {1}\n'

@@ -22,6 +22,18 @@ Presently this program can be run by the following:
 
     python random_encounter_builder.py
 
+The program will prompt you for your selections as such:
+
+    Party size?> 4
+    Party average level?> 5
+    Select difficulty:
+    Easy, Medium, Hard, or Deadly> deadly
+    Randomized encounter based on:
+    Party Size: 4
+    Party Level: 5
+    Difficulty: deadly
+    5x Spy(s) found on Monster Manual page: 349
+    Run again? Y/N>
 
 Future Additions
 ----------------

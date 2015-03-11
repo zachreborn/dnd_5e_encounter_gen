@@ -1,6 +1,7 @@
 __author__ = 'zhill'
 import monsters
 import random
+from bisect import bisect_left
 
 ########################################################################################################################
 # Encounter Table
@@ -17,11 +18,6 @@ encounter_table = {
 }
 
 
-# Encounter multiplier table based on number of monsters
-# 1 monster, 2 monsters, 3-6 monsters, 7-10 monsters, 11-14 monsters, 15+ monsters
-encounter_multiplier = [1.0, 0.67, 0.50, 0.40, 0.33, 0.25]
-
-
 def xp_budget(party_size, party_level, difficulty):
     """Function which takes the party size, average party level, and desired difficulty to return the correct XP budget
     within the encounter_table dictionary.
@@ -31,35 +27,36 @@ def xp_budget(party_size, party_level, difficulty):
     return (encounter_table[difficulty][party_level - 1]) * party_size
 
 
-def xp_list_gen(xp, party_size):
-    """Function to find factors of the XP budget integer. Returns a random factor and its pair (pair, factor),
-     so long as that factor pairing is < 30. The output factor pair is checked against D&D encounter multipliers
-     which are dependent upon the number of monsters in the encounter. More monsters means an innately more
-     difficult encounter.
-     """
-    modifier = 0
-    if party_size <= 2:
-        modifier = 1
+def xp_list_gen(xp):
+    """Function to find factors of the XP budget integer. Returns a random factor,
+    so long as that factor pairing is < 30. This keeps the number of monsters manageable.
+    """
     random_gen_factor = 0
     while random_gen_factor == 0 or (xp / random_gen_factor) > 30:
         random_gen_factor = random.choice([i for i in range(10, xp + 1) if xp % i == 0])
-    if int(xp / random_gen_factor) >= 15:
-        return int((xp / random_gen_factor) * encounter_multiplier[5]), random_gen_factor
-    elif int(xp / random_gen_factor) >= 11 <= 14:
-        return int((xp / random_gen_factor) * encounter_multiplier[4 + modifier]), random_gen_factor
-    elif int(xp / random_gen_factor) >= 7 <= 10:
-        return int((xp / random_gen_factor) * encounter_multiplier[3 + modifier]), random_gen_factor
-    elif int(xp / random_gen_factor) >= 3 <= 6:
-        return int((xp / random_gen_factor) * encounter_multiplier[2 + modifier]), random_gen_factor
-    elif int(xp / random_gen_factor) == 2:
-        return int((xp / random_gen_factor) * encounter_multiplier[1 + modifier]), random_gen_factor
-    return int((xp / random_gen_factor) * encounter_multiplier[0]), random_gen_factor
+    return random_gen_factor
 
 
-def build_encounter(xp):
-    """Function to return list of monsters for an encounter that have the XP nearest value input without going over."""
+def rnd_select_monster(xp):
+    """Function to return a randomly selected monster for an encounter that have the XP nearest the xp
+    value input without going over. Pulls random monster from the monsters.cr_dict dictionary.
+    """
     nearest_monster_xp = min([val[2] for val in monsters.cr_dict.values() if val[2] <= xp], key=lambda x: abs(x - xp))
     return random.choice([key for key, val in monsters.cr_dict.items() if val[2] == nearest_monster_xp])
+
+
+def build_encounter_size(party_size, monster_xp, xp):
+    """Function returns number of monsters in encounter based on previous function outputs.
+    The number of monsters depends upon the party size, and xp budget.
+    """
+    monster_count = [1, 2, 6, 10, 14]
+    encounter_multiplier = [1.0, 0.67, 0.50, 0.40, 0.33, 0.25]
+    num_monsters = xp // monster_xp
+    """Use monster_count table to find correct index in encounter_multiplier."""
+    index_table = bisect_left(monster_count, num_monsters)
+    if party_size <= 2 and index_table != len(encounter_multiplier) - 1:
+        index_table += 1
+    return int(num_monsters * encounter_multiplier[index_table])  # number, xp value
 
 
 def get_user_input_str(prompt, choices=None):
@@ -92,16 +89,17 @@ while script_repeat == 'y':
     difficulty_input = get_user_input_str('Select difficulty:\nEasy, Medium, Hard, or Deadly> ',
                                           choices=['easy', 'medium', 'hard', 'deadly'])
 
-
 ########################################################################################################################
 # Define run variables to output data
     encounter_xp = xp_budget(party_size_input, party_level_input, difficulty_input)
-    xp_per_monster = xp_list_gen(encounter_xp, party_size_input)
-    output_monster = build_encounter(xp_per_monster[1])
+    xp_per_monster = xp_list_gen(encounter_xp)
+    output_monster = rnd_select_monster(xp_per_monster)
+    output_encounter = build_encounter_size(party_size_input, monsters.cr_dict[output_monster][2], encounter_xp)
 
     print('Randomized encounter based on:\nParty Size: {0}\nParty Level: {1}\n'
           'Difficulty: {2}\n'
           '{3}x {4}(s) found on Monster Manual page: {5}'.format(
               party_size_input, party_level_input, difficulty_input,
-              xp_per_monster[0], output_monster, monsters.cr_dict[output_monster][0]))
+              output_encounter, output_monster, monsters.cr_dict[output_monster][0]))
+
     script_repeat = get_user_input_str('Run again? Y/N> ', choices=['y', 'n'])

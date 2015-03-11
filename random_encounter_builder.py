@@ -56,6 +56,8 @@ def build_encounter_size(party_size, monster_xp, xp):
     index_table = bisect_left(monster_count, num_monsters)
     if party_size <= 2 and index_table != len(encounter_multiplier) - 1:
         index_table += 1
+    if num_monsters == 1:
+        return num_monsters
     return int(num_monsters * encounter_multiplier[index_table])  # number, xp value
 
 

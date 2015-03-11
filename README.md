@@ -20,7 +20,6 @@ Usage
 -----
 Presently this program can be run by the following:
 
-.. code-block:: python
     python random_encounter_builder.py
 
 

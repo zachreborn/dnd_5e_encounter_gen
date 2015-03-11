@@ -33,7 +33,9 @@ def xp_budget(party_size, party_level, difficulty):
 
 def xp_list_gen(xp, party_size):
     """Function to find factors of the XP budget integer. Returns a random factor and its pair (pair, factor),
-     so long as that factor pairing is < 30.
+     so long as that factor pairing is < 30. The output factor pair is checked against D&D encounter multipliers
+     which are dependent upon the number of monsters in the encounter. More monsters means an innately more
+     difficult encounter.
      """
     modifier = 0
     if party_size <= 2:

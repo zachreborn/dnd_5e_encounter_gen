@@ -1,4 +1,4 @@
-Dungeons &amp; Dragons 5e random encounter generator
+Dungeons &amp; Dragons 5e Random Encounter Generator
 ====================================================
 
 This is a full featured D&amp;D 5e random encounter generator. It primarily makes use of a dictionary

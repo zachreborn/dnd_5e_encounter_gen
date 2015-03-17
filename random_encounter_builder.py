@@ -98,8 +98,7 @@ while script_repeat == 'y':
     output_monster = rnd_select_monster(xp_per_monster)
     output_encounter = build_encounter_size(party_size_input, monsters.cr_dict[output_monster][2], encounter_xp)
 
-    print('Randomized encounter based on:\nParty Size: {0}\nParty Level: {1}\n'
-          'Difficulty: {2}\n'
+    print('Randomized encounter based on:\nParty Size: {0}\nParty Level: {1}\nDifficulty: {2}\n'
           '{3}x {4}(s) found on Monster Manual page: {5}'.format(
               party_size_input, party_level_input, difficulty_input,
               output_encounter, output_monster, monsters.cr_dict[output_monster][0]))

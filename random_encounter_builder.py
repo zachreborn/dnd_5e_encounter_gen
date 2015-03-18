@@ -82,25 +82,28 @@ def get_user_input_int(prompt):
     return result
 
 
-########################################################################################################################
-# Define encounter variables via user input. Loop through input and output until N is entered or CTRL-C is pressed.
-script_repeat = 'y'
-while script_repeat == 'y':
-    party_size_input = get_user_input_int('Party size?> ')
-    party_level_input = get_user_input_int('Party average level?> ')
-    difficulty_input = get_user_input_str('Select difficulty:\nEasy, Medium, Hard, or Deadly> ',
-                                          choices=['easy', 'medium', 'hard', 'deadly'])
+def script_run():
+    """Define encounter variables via user input. Loop through input and output until N is entered or CTRL-C is pressed.
+    """
+    script_repeat = 'y'
+    while script_repeat == 'y':
+        party_size_input = get_user_input_int('Party size?> ')
+        party_level_input = get_user_input_int('Party average level?> ')
+        difficulty_input = get_user_input_str('Select difficulty:\nEasy, Medium, Hard, or Deadly> ',
+                                              choices=['easy', 'medium', 'hard', 'deadly'])
 
-########################################################################################################################
-# Define run variables to output data
-    encounter_xp = xp_budget(party_size_input, party_level_input, difficulty_input)
-    xp_per_monster = xp_list_gen(encounter_xp)
-    output_monster = rnd_select_monster(xp_per_monster)
-    output_encounter = build_encounter_size(party_size_input, monsters.cr_dict[output_monster][2], encounter_xp)
+        """Define run variables to output data."""
+        encounter_xp = xp_budget(party_size_input, party_level_input, difficulty_input)
+        xp_per_monster = xp_list_gen(encounter_xp)
+        output_monster = rnd_select_monster(xp_per_monster)
+        output_encounter = build_encounter_size(party_size_input, monsters.cr_dict[output_monster][2], encounter_xp)
 
-    print('Randomized encounter based on:\nParty Size: {0}\nParty Level: {1}\nDifficulty: {2}\n'
-          '{3}x {4}(s) found on Monster Manual page: {5}'.format(
-              party_size_input, party_level_input, difficulty_input,
-              output_encounter, output_monster, monsters.cr_dict[output_monster][0]))
+        print('Randomized encounter based on:\nParty Size: {0}\nParty Level: {1}\nDifficulty: {2}\n'
+              '{3}x {4}(s) found on Monster Manual page: {5}'.format(
+                  party_size_input, party_level_input, difficulty_input,
+                  output_encounter, output_monster, monsters.cr_dict[output_monster][0]))
 
-    script_repeat = get_user_input_str('Run again? Y/N> ', choices=['y', 'n'])
+        script_repeat = get_user_input_str('Run again? Y/N> ', choices=['y', 'n'])
+
+
+script_run()

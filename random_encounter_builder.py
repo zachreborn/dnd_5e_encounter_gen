@@ -62,6 +62,7 @@ def build_encounter_size(party_size, monster_xp, xp):
 
 
 def get_user_input_str(prompt, choices=None):
+    """Function returns a string based on input with exception check, so long as the input is one of a few choices."""
     result = None
     while result is None:
         val = input(prompt).lower()
@@ -73,6 +74,7 @@ def get_user_input_str(prompt, choices=None):
 
 
 def get_user_input_int(prompt):
+    """Function returns an integer based on input with exception checking."""
     result = None
     while result is None:
         try:
@@ -83,6 +85,7 @@ def get_user_input_int(prompt):
 
 
 def get_user_input_vars():
+    """Function grabs user input and returns formatted output for encounter building."""
     party_size_input = get_user_input_int('Party size?> ')
     party_level_input = get_user_input_int('Party average level?> ')
     difficulty_input = get_user_input_str('Select difficulty:\nEasy, Medium, Hard, or Deadly> ',

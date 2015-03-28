@@ -1,9 +1,12 @@
-from distutils.core import setup
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
 
 setup(
     name='dnd_5e_encounter_gen',
     version='1.0',
-    packages=['monsters.py', 'random_encounter_builder.py'],
+    packages=['monsters', 'random_encounter_builder'],
     url='https://github.com/zachreborn',
     license='BSD',
     author='Zachary Hill',

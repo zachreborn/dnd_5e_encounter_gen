@@ -104,7 +104,6 @@ def get_user_input_vars():
                                           'medium', choices=['easy', 'medium', 'hard', 'deadly'])
     monster_type = get_user_input_str("Select monster type:'?' [All]> ",
                                       'all', choices=monster_types_list)
-    # seed_monster = get_user_input_str('Seed monster (default: None)> ', 'none', choices=monsters.cr_dict.keys())
     return party_size_input, party_level_input, difficulty_input, monster_type
 
 

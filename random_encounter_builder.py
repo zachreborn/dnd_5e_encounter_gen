@@ -109,7 +109,8 @@ def get_user_input_vars():
 
 
 def script_run():
-    """Define encounter variables via user input. Loop through input and output until N is entered or CTRL-C is pressed.
+    """Define encounter variables via user input. Loop through input and output
+    until N or No is entered or CTRL-C is pressed.
     """
     current_encounter = get_user_input_vars()
     script_repeat = 'y'

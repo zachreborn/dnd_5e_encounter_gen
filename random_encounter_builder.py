@@ -20,6 +20,7 @@ encounter_table = {
 monster_types_list = ['all', 'aberration', 'beast', 'celestial', 'construct', 'dragon', 'elemental',
                       'fey', 'fiend', 'giant', 'humanoid', 'monstrosity', 'ooze', 'plant', 'undead']
 
+
 def xp_budget(party_size, party_level, difficulty):
     """Function which takes the party size, average party level, and desired difficulty to return the correct XP budget
     within the encounter_table dictionary.
@@ -49,8 +50,7 @@ def rnd_select_monster(xp, monster_type):
         output_monster = random.choice([key for key, val in monsters.cr_dict.items() if val[2] == nearest_monster_xp])
         return output_monster
     else:
-        output_monster = random.choice([key for key, val in monsters.cr_dict.items()
-                                        if val[2] == nearest_monster_xp and val[4] == monster_type.capitalize()])
+        output_monster = random.choice([key for key, val in monsters.cr_dict.items() if val[2] == nearest_monster_xp and val[4] == monster_type.capitalize()])
         return output_monster
 
 
@@ -101,9 +101,9 @@ def get_user_input_vars():
     party_size_input = get_user_input_int('Party size?> ')
     party_level_input = get_user_input_int('Party average level?> ')
     difficulty_input = get_user_input_str('Select difficulty:\nEasy, [Medium], Hard, or Deadly> ',
-                                          'medium', choices=['easy', 'medium', 'hard', 'deadly'])
+                                          default_choice='medium', choices=['easy', 'medium', 'hard', 'deadly'])
     monster_type = get_user_input_str("Select monster type:'?' [All]> ",
-                                      'all', choices=monster_types_list)
+                                      default_choice='all', choices=monster_types_list)
     return party_size_input, party_level_input, difficulty_input, monster_type
 
 
@@ -125,7 +125,7 @@ def script_run():
                   current_encounter[0], current_encounter[1], current_encounter[2], current_encounter[3],
                   output_encounter, output_monster, monsters.cr_dict[output_monster][0]))
 
-        script_repeat = get_user_input_str('Run again? Y/N\n[Y]> ', 'y', choices=['y', 'yes', 'n', 'no'])
+        script_repeat = get_user_input_str('Run again? Y/N\n[Y]> ', default_choice='y', choices=['y', 'yes', 'n', 'no'])
 
 
 script_run()

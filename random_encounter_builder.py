@@ -32,10 +32,10 @@ def xp_budget(party_size, party_level, difficulty):
 
 def xp_list_gen(xp):
     """Function to find factors of the XP budget integer. Returns a random factor,
-    so long as that factor pairing is < 31. This keeps the number of monsters manageable.
+    so long as that factor pairing is < 21. This keeps the number of monsters manageable.
     """
     random_gen_factor = 0
-    while random_gen_factor == 0 or (xp / random_gen_factor) > 30:
+    while random_gen_factor == 0 or (xp / random_gen_factor) > 20:
         random_gen_factor = random.choice([i for i in range(10, xp + 1) if xp % i == 0])
     return random_gen_factor
 
@@ -45,11 +45,15 @@ def rnd_select_monster(xp, monster_type):
     value input without going over. First checks to see if monster_type filter is set or not then
     pulls random monster from the monsters.cr_dict dictionary.
     """
-    nearest_monster_xp = min([val[2] for val in monsters.cr_dict.values() if val[2] <= xp], key=lambda x: abs(x - xp))
     if monster_type == 'all':
+        nearest_monster_xp = min([val[2] for val in monsters.cr_dict.values() if val[2] <= xp], key=lambda x: abs(x - xp))
         output_monster = random.choice([key for key, val in monsters.cr_dict.items() if val[2] == nearest_monster_xp])
         return output_monster
     else:
+        print('XP factor is:', xp)
+        monster_type_dict = {key: val for key, val in monsters.cr_dict.items() if val[4] == monster_type.capitalize()}
+        nearest_monster_xp = min([val[2] for val in monster_type_dict.values() if val[2] <= xp], key=lambda x: abs(x - xp))
+        print('Nearest monster xp is:', nearest_monster_xp)
         output_monster = random.choice([key for key, val in monsters.cr_dict.items() if val[2] == nearest_monster_xp and val[4] == monster_type.capitalize()])
         return output_monster
 

@@ -16,7 +16,7 @@ Features
 
 Usage
 -----
-Presently this program can be run by the following:
+Run this program with the following:
 
     python random_encounter_builder.py
 
@@ -25,17 +25,18 @@ The program will prompt you for your selections as such:
     Party size?> 4
     Party average level?> 5
     Select difficulty:
-    Easy, Medium, Hard, or Deadly> deadly
+    Easy, [Medium], Hard, or Deadly> deadly
+    Select monster type:'?' [All]> humanoid
     Randomized encounter based on:
     Party Size: 4
     Party Level: 5
     Difficulty: deadly
     5x Spy(s) found on Monster Manual page: 349
-    Run again? Y/N>
+    Run again? Y/N
+    [Y]>
 
 Future Additions
 ----------------
 
-My primary next goal will be to add monster groupings to either a separate dictionary or the same dictionary.
-This will allow for monster groupings outside of a single monster type using a more iterative approach of
-selecting monsters from the dictionaries.
+- Seed monsters
+- Encounter generation based on location

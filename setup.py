@@ -6,7 +6,7 @@ except ImportError:
 setup(
     name='dnd_5e_encounter_gen',
     version='1.1',
-    packages=['monsters', 'random_encounter_builder'],
+    packages=['dnd_5e_encounter_gen'],
     url='https://github.com/zachreborn/dnd_5e_encounter_gen',
     license='BSD',
     author='Zachary Hill',

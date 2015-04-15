@@ -1,7 +1,9 @@
 __author__ = 'zhill'
-import monsters
 import random
 from bisect import bisect_left
+
+from dnd_5e_encounter_gen import monsters
+
 
 ########################################################################################################################
 # Encounter Table

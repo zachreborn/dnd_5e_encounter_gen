@@ -1,8 +1,8 @@
 __author__ = 'Zachary Hill'
 import random
+from dnd_5e_encounter_gen import monsters
 from bisect import bisect_left
 
-from dnd_5e_encounter_gen import monsters
 
 
 ########################################################################################################################

@@ -4,7 +4,6 @@ from dnd_5e_encounter_gen import monsters
 from bisect import bisect_left
 
 
-
 ########################################################################################################################
 # Encounter Table
 # Table filled with encounter data for difficulties and XP budgets. Useful data can be derived

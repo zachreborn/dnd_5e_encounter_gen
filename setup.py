@@ -7,7 +7,7 @@ setup(
     name='dnd_5e_encounter_gen',
     version='1.1',
     packages=['monsters', 'random_encounter_builder'],
-    url='https://github.com/zachreborn',
+    url='https://github.com/zachreborn/dnd_5e_encounter_gen',
     license='BSD',
     author='Zachary Hill',
     author_email='zhill@octonetwork.com',

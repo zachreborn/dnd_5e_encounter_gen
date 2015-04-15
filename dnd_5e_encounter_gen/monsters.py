@@ -1,3 +1,4 @@
+__author__ = 'Zachary Hill'
 # Monsters by CR
 # 'Monster Name': [Monster Manual Page, 'Challenge Rating number', Experience Points, Size, Type, Tags, Alignment]
 # 'Key'         :       [0],                       [1],                      [2]      [3]   [4]   [5]      [6]

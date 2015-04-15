@@ -1,4 +1,4 @@
-__author__ = 'zhill'
+__author__ = 'Zachary Hill'
 import random
 from bisect import bisect_left
 

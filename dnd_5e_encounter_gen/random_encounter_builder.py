@@ -53,7 +53,7 @@ def rnd_select_monster(xp, monster_type):
     else:
         monster_type_dict = {key: val for key, val in monsters.cr_dict.items() if val[4] == monster_type.capitalize()}
         nearest_monster_xp = min([val[2] for val in monster_type_dict.values() if val[2] <= xp], key=lambda x: abs(x - xp))
-        output_monster = random.choice([key for key, val in monsters.cr_dict.items() if val[2] == nearest_monster_xp and val[4] == monster_type.capitalize()])
+        output_monster = random.choice([key for key, val in monster_type_dict.items() if val[2] == nearest_monster_xp and val[4] == monster_type.capitalize()])
         return output_monster
 
 

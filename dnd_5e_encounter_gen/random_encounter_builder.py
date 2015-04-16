@@ -5,8 +5,6 @@ from dnd_5e_encounter_gen import encounter_tables
 from bisect import bisect_left
 
 
-
-
 def xp_budget(party_size, party_level, difficulty):
     """Function which takes the party size, average party level, and desired difficulty to return the correct XP budget
     within the encounter_table dictionary.

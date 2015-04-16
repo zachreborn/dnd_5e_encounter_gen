@@ -1,25 +1,10 @@
 __author__ = 'Zachary Hill'
 import random
 from dnd_5e_encounter_gen import monsters
+from dnd_5e_encounter_gen import encounter_tables
 from bisect import bisect_left
 
 
-########################################################################################################################
-# Encounter Table
-# Table filled with encounter data for difficulties and XP budgets. Useful data can be derived
-encounter_table = {
-    'easy': [25, 50, 75, 125, 250, 300, 350, 450, 550, 600, 800, 1000,
-             1100, 1250, 1400, 1600, 2000, 2100, 2400, 2800],
-    'medium': [50, 100, 150, 250, 500, 600, 750, 900, 1100, 1200, 1600,
-               2000, 2200, 2500, 2800, 3200, 3900, 4200, 4900, 5700],
-    'hard': [75, 150, 225, 375, 750, 900, 1100, 1400, 1600, 1900, 2400,
-             3000, 3400, 3800, 4300, 4800, 5900, 6300, 7300, 8500],
-    'deadly': [100, 200, 400, 500, 1100, 1400, 1700, 2100, 2400, 2800,
-               3600, 4500, 5100, 5700, 6400, 7200, 8800, 9500, 10900, 12700],
-}
-
-monster_types_list = ['all', 'aberration', 'beast', 'celestial', 'construct', 'dragon', 'elemental',
-                      'fey', 'fiend', 'giant', 'humanoid', 'monstrosity', 'ooze', 'plant', 'undead']
 
 
 def xp_budget(party_size, party_level, difficulty):
@@ -28,7 +13,7 @@ def xp_budget(party_size, party_level, difficulty):
     """
     if party_level > 20 or party_level < 1 or party_size < 1:
         raise ValueError('Party level should be between 1 and 20, while party size should be 1 or greater.')
-    return (encounter_table[difficulty][party_level - 1]) * party_size
+    return (encounter_tables.xp_difficulties[difficulty][party_level - 1]) * party_size
 
 
 def xp_list_gen(xp):
@@ -106,7 +91,7 @@ def get_user_input_vars():
     difficulty_input = get_user_input_str('Select difficulty:\nEasy, [Medium], Hard, or Deadly> ',
                                           default_choice='medium', choices=['easy', 'medium', 'hard', 'deadly'])
     monster_type = get_user_input_str("Select monster type:'?' [All]> ",
-                                      default_choice='all', choices=monster_types_list)
+                                      default_choice='all', choices=encounter_tables.monster_types_list)
     return party_size_input, party_level_input, difficulty_input, monster_type
 
 

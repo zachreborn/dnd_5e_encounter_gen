@@ -6,6 +6,7 @@ from bisect import bisect_left
 
 
 class Monster:
+    """Ignore this for now. Just doing some thinking/testing."""
     def __init__(self, manpage, cr, xp, size, monster_type, tags, alignment):
         self.manpage = manpage
         self.cr = cr

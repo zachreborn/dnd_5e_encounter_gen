@@ -5,6 +5,17 @@ from dnd_5e_encounter_gen import encounter_tables
 from bisect import bisect_left
 
 
+class Monster:
+    def __init__(self, manpage, cr, xp, size, monster_type, tags, alignment):
+        self.manpage = manpage
+        self.cr = cr
+        self.xp = xp
+        self.size = size
+        self.monster_type = monster_type
+        self.tags = tags
+        self.alignment = alignment
+
+
 def xp_budget(party_size, party_level, difficulty):
     """Function which takes the party size, average party level, and desired difficulty to return the correct XP budget
     within the encounter_table dictionary.
@@ -18,9 +29,10 @@ def xp_list_gen(xp):
     """Function to find factors of the XP budget integer. Returns a random factor,
     so long as that factor pairing is < 21. This keeps the number of monsters manageable.
     """
+    xp_factors = [i for i in range(10, xp + 1) if xp % i == 0]
     random_gen_factor = 0
     while random_gen_factor == 0 or (xp / random_gen_factor) > 20:
-        random_gen_factor = random.choice([i for i in range(10, xp + 1) if xp % i == 0])
+        random_gen_factor = random.choice(xp_factors)
     return random_gen_factor
 
 
@@ -31,12 +43,14 @@ def rnd_select_monster(xp, monster_type):
     """
     if monster_type == 'all':
         nearest_monster_xp = min([val[2] for val in monsters.cr_dict.values() if val[2] <= xp], key=lambda x: abs(x - xp))
-        output_monster = random.choice([key for key, val in monsters.cr_dict.items() if val[2] == nearest_monster_xp])
+        monster_options = [key for key, val in monsters.cr_dict.items() if val[2] == nearest_monster_xp]
+        output_monster = random.choice(monster_options)
         return output_monster
     else:
         monster_type_dict = {key: val for key, val in monsters.cr_dict.items() if val[4] == monster_type.capitalize()}
         nearest_monster_xp = min([val[2] for val in monster_type_dict.values() if val[2] <= xp], key=lambda x: abs(x - xp))
-        output_monster = random.choice([key for key, val in monster_type_dict.items() if val[2] == nearest_monster_xp and val[4] == monster_type.capitalize()])
+        monster_options = [key for key, val in monster_type_dict.items() if val[2] == nearest_monster_xp and val[4] == monster_type.capitalize()]
+        output_monster = random.choice(monster_options)
         return output_monster
 
 
@@ -88,8 +102,7 @@ def get_user_input_vars():
     party_level_input = get_user_input_int('Party average level?> ')
     difficulty_input = get_user_input_str('Select difficulty:\nEasy, [Medium], Hard, or Deadly> ',
                                           default_choice='medium', choices=['easy', 'medium', 'hard', 'deadly'])
-    monster_type = get_user_input_str("Select monster type:'?' [All]> ",
-                                      default_choice='all', choices=encounter_tables.monster_types_list)
+    monster_type = get_user_input_str("Select monster type:'?' [All]> ", default_choice='all', choices=encounter_tables.monster_types_list)
     return party_size_input, party_level_input, difficulty_input, monster_type
 
 

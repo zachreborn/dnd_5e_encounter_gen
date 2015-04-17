@@ -135,6 +135,7 @@ def script_run():
 def main():
     for key in monsters.cr_dict:
         monsters_dict[key] = Monster(key, *monsters.cr_dict[key])
+
     script_run()
 
 

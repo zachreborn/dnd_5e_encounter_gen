@@ -47,7 +47,7 @@ cr_dict = {
     'Giant weasel': [329, '1/8', 25, 'Medium', 'Beast'],
     'Guard': [347, '1/8', 25, 'Medium', 'Humanoid'],
     'Kobold': [195, '1/8', 25, 'Small', 'Humanoid'],
-    'Manes': [60, '1/8', 25, 'Small', 'Fiend', 'demon'],
+    'Manes': [60, '1/8', 25, 'Small', 'Fiend'],
     'Mastiff': [332, '1/8', 25, 'Medium', 'Beast'],
     'Merfolk': [218, '1/8', 25, 'Medium', 'Humanoid'],
     'Monodrone': [224, '1/8', 25, 'Medium', 'Construct'],
@@ -295,7 +295,7 @@ cr_dict = {
     # CR5 is 1800XP
     'Air elemental': [124, '5', 1800, 'Large', 'Elemental'],
     'Barbed devil': [70, '5', 1800, 'Medium', 'Fiend'],
-    'Barlgura': [56, '5', 1800, 'Large', 'Fiend', 'demon'],
+    'Barlgura': [56, '5', 1800, 'Large', 'Fiend'],
     'Beholder zombie': [316, '5', 1800, 'Large', 'Undead'],
     'Bulette': [34, '5', 1800, 'Large', 'Monstrosity'],
     'Cambion': [36, '5', 1800, 'Medium', 'Fiend'],
@@ -342,7 +342,7 @@ cr_dict = {
     'Mage': [347, '6', 2300, 'Medium', 'Humanoid'],
     'Mammoth': [332, '6', 2300, 'Huge', 'Beast'],
     'Medusa': [214, '6', 2300, 'Medium', 'Monstrosity'],
-    'Vrock': [64, '6', 2300, 'Large', 'Fiend', 'demon'],
+    'Vrock': [64, '6', 2300, 'Large', 'Fiend'],
     'Wyvern': [303, '6', 2300, 'Large', 'Dragon'],
     'Young brass dragon': [105, '6', 2300, 'Large', 'Dragon'],
     'Young white dragon': [101, '6', 2300, 'Large', 'Dragon'],
@@ -368,7 +368,7 @@ cr_dict = {
     'Frost giant': [155, '8', 3900, 'Huge', 'Giant'],
     'Githyanki knight': [160, '8', 3900, 'Medium', 'Humanoid'],
     'Green slaad': [277, '8', 3900, 'Large', 'Aberration'],
-    'Hezrou': [60, '8', 3900, 'Large', 'Fiend', 'demon'],
+    'Hezrou': [60, '8', 3900, 'Large', 'Fiend'],
     'Hydra': [190, '8', 3900, 'Huge', 'Monstrosity'],
     'Mind flayer arcanist': [222, '8', 3900, 'Medium', 'Aberration'],
     'Spirit naga': [234, '8', 3900, 'Large', 'Monstrosity'],
@@ -438,7 +438,7 @@ cr_dict = {
     'Adult blue dragon': [91, '16', 15000, 'Huge', 'Dragon'],
     'Adult silver dragon': [117, '16', 15000, 'Huge', 'Dragon'],
     'Iron golem': [170, '16', 15000, 'Large', 'Construct'],
-    'Marilith': [61, '16', 15000, 'Large', 'Fiend', 'demon'],
+    'Marilith': [61, '16', 15000, 'Large', 'Fiend'],
     'Mummy lord (lair)': [229, '16', 15000, 'Medium', 'Undead'],
     'Planetar': [17, '16', 15000, 'Large', 'Celestial'],
     # CR17 is 18000XP
@@ -452,7 +452,7 @@ cr_dict = {
     # CR18 is 20000XP
     'Demilich': [48, '18', 20000, 'Tiny', 'Undead'],
     # CR19 is 22000XP
-    'Balor': [55, '19', 22000, 'Huge', 'Fiend', 'demon'],
+    'Balor': [55, '19', 22000, 'Huge', 'Fiend'],
     # CR20 is 25000XP
     'Ancient brass dragon': [104, '20', 25000, 'Gargantuan', 'Dragon'],
     'Ancient white dragon': [100, '20', 25000, 'Gargantuan', 'Dragon'],

@@ -44,9 +44,9 @@ def rnd_select_monster(xp, monster_type):
     pulls random monster from the monsters.cr_dict dictionary.
     """
     if monster_type == 'all':
-        nearest_monster_xp = min([val[2] for val in monsters.cr_dict.values() if val[2] <= xp], key=lambda x: abs(x - xp))
-        monster_options = [key for key, val in monsters.cr_dict.items() if val[2] == nearest_monster_xp]
-        output_monster = random.choice(monster_options)
+        nearest_monster_xp = min([monsters_dict[key].xp for key in monsters_dict if monsters_dict[key].xp <= xp], key=lambda x: abs(x - xp))
+        monster_selections = [key for key in monsters_dict if monsters_dict[key].xp == nearest_monster_xp]
+        output_monster = random.choice(monster_selections)
         return output_monster
     else:
         monster_type_dict = {key: val for key, val in monsters.cr_dict.items() if val[4] == monster_type.capitalize()}

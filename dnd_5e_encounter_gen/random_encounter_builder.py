@@ -7,14 +7,27 @@ from bisect import bisect_left
 
 class Monster:
     """Ignore this for now. Just doing some thinking/testing."""
-    def __init__(self, manpage, cr, xp, size, monster_type, tags, alignment):
+    def __init__(self, monster_name, manpage, cr, xp, size, monster_type, tags):
+        self.monster_name = monster_name
         self.manpage = manpage
         self.cr = cr
         self.xp = xp
         self.size = size
         self.monster_type = monster_type
         self.tags = tags
-        self.alignment = alignment
+        print('test', Monster, monster_type)
+
+    def __str__(self):
+        return '<Monster>' + str(self.__dict__())
+
+
+def clean_monsters(input_monsters):
+    for key in input_monsters:
+        key = Monster(*input_monsters[key])
+
+
+
+clean_monsters(monsters.cr_dict)
 
 
 def xp_budget(party_size, party_level, difficulty):

@@ -17,8 +17,8 @@ class Monster:
         self.tags = tags
         print('test', Monster, monster_type)
 
-    def __str__(self):
-        return '<Monster>' + str(self.__dict__())
+    #def __str__(self):
+    #    return '<Monster>' + str(self.__dict__())
 
 
 def clean_monsters(input_monsters):

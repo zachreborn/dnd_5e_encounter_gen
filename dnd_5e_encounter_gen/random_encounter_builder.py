@@ -4,6 +4,8 @@ from dnd_5e_encounter_gen import monsters
 from dnd_5e_encounter_gen import encounter_tables
 from bisect import bisect_left
 
+monsters_dict = {}
+
 
 class Monster:
     """Ignore this for now. Just doing some thinking/testing."""
@@ -14,18 +16,6 @@ class Monster:
         self.xp = xp
         self.size = size
         self.monster_type = monster_type
-
-    #def __str__(self):
-    #    return '<Monster>' + str(self.__dict__())
-
-
-def clean_monsters(input_monsters):
-    for key in input_monsters:
-        key = Monster(key, *input_monsters[key])
-
-
-
-clean_monsters(monsters.cr_dict)
 
 
 def xp_budget(party_size, party_level, difficulty):
@@ -139,4 +129,8 @@ def script_run():
         script_repeat = get_user_input_str('Run again? Y/N\n[Y]> ', default_choice='y', choices=['y', 'yes', 'n', 'no'])
 
 
-script_run()
+def main():
+    script_run()
+
+if __name__ == '__main__':
+    main()

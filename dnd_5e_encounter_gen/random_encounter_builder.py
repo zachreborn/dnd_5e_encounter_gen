@@ -1,7 +1,7 @@
 __author__ = 'Zachary Hill'
 import random
-from dnd_5e_encounter_gen import monsters
-from dnd_5e_encounter_gen import encounter_tables
+import monsters
+import encounter_tables
 from bisect import bisect_left
 
 monsters_dict = {}

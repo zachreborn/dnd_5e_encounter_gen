@@ -68,6 +68,7 @@ def build_encounter_size(party_size, monster_xp, xp):
     """Function returns number of monsters in encounter based on previous function outputs.
     The number of monsters depends upon the party size, and xp budget.
     """
+    ## TODO need to rebuild this function. Function should subtract from the XP pool to determine encounter size. Will allow for encounters that are closer to the proper difficulty.
     monster_count = [1, 2, 6, 10, 14]
     encounter_multiplier = [1.0, 0.67, 0.50, 0.40, 0.33, 0.25]
     num_monsters = xp // monster_xp

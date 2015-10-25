@@ -28,6 +28,8 @@ def xp_budget(party_size, party_level, difficulty):
     party_level -- The average level of the party members taken from the user.
     difficulty -- Easy, Medium, Hard, or Deadly taken from the user. These values dictate the total xp budget allowed
                 in order to determine how difficult an encounter will be.
+
+    returns: Int for upper bounds of XP budget.
     """
     if party_level > 20 or party_level < 1 or party_size < 1:
         raise ValueError('Party level should be between 1 and 20, while party size should be 1 or greater.')
@@ -64,6 +66,7 @@ def rnd_select_monster(xp, monster_type, input_monster_dict):
 
 
 def list_monster_xp(input_monster_dict, xp):
+    """Function to list all monsters that fit the factored XP criteria."""
     monster_xp_list = []
     for key in input_monster_dict:
         if input_monster_dict[key].xp <= xp:
@@ -129,6 +132,7 @@ def script_run():
     until N or No is entered or CTRL-C is pressed.
     """
     # TODO restructure code so that it uses friendly names. ie current_encounter[1] should be current_encounter.avg_level
+    # TODO also return the remainder of the XP budget, and current XP budget so DM can decide if they want to modify the encounter.
     current_encounter = get_user_input_vars()
     script_repeat = 'y'
     while script_repeat == 'y' or script_repeat == 'yes':

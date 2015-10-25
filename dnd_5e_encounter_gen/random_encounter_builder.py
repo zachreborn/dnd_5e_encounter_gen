@@ -1,8 +1,9 @@
-__author__ = 'Zachary Hill'
 import random
 import monsters
 import encounter_tables
 from bisect import bisect_left
+
+__author__ = 'Zachary Hill'
 
 monsters_dict = {}
 
@@ -29,7 +30,7 @@ def xp_budget(party_size, party_level, difficulty):
 
 def xp_list_gen(xp):
     """Function to find factors of the XP budget integer. Returns a random factor,
-    so long as that factor pairing is < 21. This keeps the number of monsters manageable.
+    so long as that factor pairing is < 21. This keeps the number of monsters output manageable.
     """
     xp_factors = [i for i in range(10, xp + 1) if xp % i == 0]
     random_gen_factor = 0
@@ -121,6 +122,7 @@ def script_run():
     """Define encounter variables via user input. Loop through input and output
     until N or No is entered or CTRL-C is pressed.
     """
+    # TODO restructure code so that it uses friendly names. ie current_encounter[1] should be current_encounter.avg_level
     current_encounter = get_user_input_vars()
     script_repeat = 'y'
     while script_repeat == 'y' or script_repeat == 'yes':

@@ -21,7 +21,13 @@ class Monster:
 
 def xp_budget(party_size, party_level, difficulty):
     """Function which takes the party size, average party level, and desired difficulty to return the correct XP budget
-    within the encounter_table dictionary.
+    within the encounter_table dictionary. Party level must be 1 through 20.
+
+    Args:
+    party_size -- The input size of the party taken from the user.
+    party_level -- The average level of the party members taken from the user.
+    difficulty -- Easy, Medium, Hard, or Deadly taken from the user. These values dictate the total xp budget allowed
+                in order to determine how difficult an encounter will be.
     """
     if party_level > 20 or party_level < 1 or party_size < 1:
         raise ValueError('Party level should be between 1 and 20, while party size should be 1 or greater.')

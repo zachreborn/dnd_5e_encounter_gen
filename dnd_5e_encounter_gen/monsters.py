@@ -1,5 +1,5 @@
 __author__ = 'Zachary Hill'
-## TODO move this to an easier to write file YAML or XML then import with a class.
+## TODO move this to an easier to write file YAML or jason then import with a class.
 # Monsters by CR
 # 'Monster Name': [Monster Manual Page, 'Challenge Rating number', Experience Points, Size, Type]
 # 'Key'         :       [0],                       [1],                      [2]      [3]   [4]

@@ -1,10 +1,14 @@
+import contextlib
 import hashlib
+import io
+import json
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from tools.extract_srd import extract
+from tools.extract_srd import extract, main, pdf_text
 
 
 def page_text(page_number, content):
@@ -14,6 +18,45 @@ def page_text(page_number, content):
 
 
 class ExtractionTests(unittest.TestCase):
+    def test_pdf_subprocess_has_timeout_and_utf8_decoding(self):
+        result = subprocess.CompletedProcess([], 0, stdout="Will-o’-Wisp\n", stderr="")
+        with patch("tools.extract_srd.subprocess.run", return_value=result) as run:
+            self.assertEqual(pdf_text(Path("source.pdf"), "-layout"), "Will-o’-Wisp\n")
+        self.assertEqual(run.call_args.args[0], ["pdftotext", "-layout", "source.pdf", "-"])
+        self.assertEqual(run.call_args.kwargs.get("encoding"), "utf-8")
+        timeout = run.call_args.kwargs.get("timeout")
+        self.assertIsInstance(timeout, (int, float))
+        self.assertGreater(timeout, 0)
+        self.assertLessEqual(timeout, 180)
+
+    def test_pdf_subprocess_timeout_propagates(self):
+        with patch("tools.extract_srd.subprocess.run",
+                   side_effect=subprocess.TimeoutExpired("pdftotext", 60)):
+            with self.assertRaises(subprocess.TimeoutExpired):
+                pdf_text(Path("source.pdf"))
+
+    def test_generated_catalog_and_index_are_written_as_utf8(self):
+        pack = {"monsters": [{"name": "Will-o’-Wisp"}]}
+        manifest = {"entries": {"Will-o’-Wisp": 341}}
+        native_write_text = Path.write_text
+
+        def write_as_utf8(path, text, **kwargs):
+            self.assertEqual(kwargs.get("encoding"), "utf-8")
+            return native_write_text(path, text, **kwargs)
+
+        with tempfile.TemporaryDirectory() as directory:
+            catalog = Path(directory) / "catalog.json"
+            index = Path(directory) / "index.json"
+            arguments = ["extract_srd.py", "source.pdf", str(catalog), "--index-manifest", str(index)]
+            with patch("sys.argv", arguments), patch("tools.extract_srd.extract", return_value=(pack, manifest)):
+                with patch.object(Path, "write_text", autospec=True, side_effect=write_as_utf8):
+                    with contextlib.redirect_stdout(io.StringIO()):
+                        main()
+            for path, expected in ((catalog, pack), (index, manifest)):
+                text = path.read_bytes().decode("utf-8")
+                self.assertIn("Will-o’-Wisp", text)
+                self.assertEqual(json.loads(text), expected)
+
     def extraction(self, block, index="Test..........258", right=""):
         with tempfile.TemporaryDirectory() as directory:
             pdf = Path(directory) / "fixture.pdf"

@@ -31,7 +31,7 @@ def slug(name):
 def pdf_text(pdf, *options):
     return subprocess.run(
         ["pdftotext", *options, str(pdf), "-"],
-        check=True, text=True, capture_output=True,
+        check=True, text=True, encoding="utf-8", capture_output=True, timeout=60,
     ).stdout
 
 
@@ -140,7 +140,7 @@ def main():
     pack, manifest = extract(args.pdf)
     for path, document in ((args.catalog, pack), (args.index_manifest, manifest)):
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(json.dumps(document, indent=2, ensure_ascii=False) + "\n")
+        path.write_text(json.dumps(document, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Extracted {len(manifest['entries'])} stat blocks; {len(pack['monsters'])} including lair variants.")
 
 

@@ -102,6 +102,11 @@ Do not describe a skipped check or an unrun platform matrix as passed.
   extensions. Runtime rejects booleans and float tokens as integer fields.
 - Never execute a catalog, follow reference URLs, or download content at runtime.
   Keep catalog size/error handling and tests for malformed data.
+- Validate tag/alias types before set-based uniqueness checks. Monster reference
+  and extension containers must be detached and recursively immutable, including
+  records constructed directly or with `dataclasses.replace`.
+- Bound `pdftotext` calls with a 60-second timeout and use explicit UTF-8 decoding
+  and output encoding when regenerating the catalog and index manifest.
 - Bundle all 330 indexed SRD 5.2.1 stat blocks plus 27 explicit lair variants
   (357 records). This does NOT mean the entire commercial Monster Manual.
   Additional content needs authorized user-supplied packs.

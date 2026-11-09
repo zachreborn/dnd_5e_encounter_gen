@@ -141,6 +141,12 @@ Duplicate JSON keys, nonstandard numeric constants, unsupported versions,
 invalid fields, invalid UTF-8, and catalogs over 10,000,000 characters are rejected.
 The loader never evaluates code or fetches reference links.
 
+Tag and alias uniqueness is validated with a set after checking item types,
+avoiding quadratic scans on large packs. Constructed monster records detach and
+recursively freeze reference and extension containers: later edits to a parsed
+source document cannot change an existing encounter. These runtime mappings are
+read-only and nested sequences are tuples; edit the source JSON pack instead.
+
 ## Migrate an existing catalog
 
 The original 511-record catalog is preserved unchanged at `legacy/monsters.py`.
@@ -193,6 +199,9 @@ PDF tooling is development-only. Review source changes and catalog diffs before
 updating the pack and its independent index fixture. Do not update a fixture
 merely to make a failing test pass. Automated extraction/index checks are not
 a claim that an independent human has reviewed every field.
+
+Each `pdftotext` invocation has a 60-second timeout. Subprocess text decoding
+and generated catalog/index files explicitly use UTF-8, independent of locale.
 
 ## Development and validation
 

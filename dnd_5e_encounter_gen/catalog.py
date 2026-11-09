@@ -2,15 +2,26 @@
 
 import json
 import re
+from collections.abc import Mapping
 from dataclasses import dataclass, field
 from importlib.resources import files
 from pathlib import Path
+from types import MappingProxyType
 
 MAX_CATALOG_CHARACTERS = 10_000_000
 
 
 class CatalogError(ValueError):
     """An unreadable, invalid, or conflicting catalog."""
+
+
+def _freeze(value):
+    """Copy JSON containers into recursively immutable, detached containers."""
+    if isinstance(value, Mapping):
+        return MappingProxyType({key: _freeze(item) for key, item in value.items()})
+    if isinstance(value, (list, tuple)):
+        return tuple(_freeze(item) for item in value)
+    return value
 
 
 @dataclass(frozen=True)
@@ -25,7 +36,14 @@ class Monster:
     references: tuple = ()
     tags: tuple = ()
     aliases: tuple = ()
-    extensions: dict = field(default_factory=dict, compare=False, hash=False)
+    extensions: Mapping[str, object] = field(default_factory=dict, compare=False, hash=False)
+
+    def __post_init__(self):
+        try:
+            for name in ("references", "tags", "aliases", "extensions"):
+                object.__setattr__(self, name, _freeze(getattr(self, name)))
+        except RecursionError as error:
+            raise CatalogError(f"{self.id}: metadata is nested too deeply") from error
 
 
 def catalog_schema():
@@ -93,12 +111,15 @@ def _validate(value, rule, root, location):
             elif rule.get("additionalProperties") is False:
                 fail(f"unknown field {key}; use extensions for custom metadata")
     if expected == "array":
-        if rule.get("uniqueItems"):
-            for index, item in enumerate(value):
-                if item in value[:index]:
-                    fail("duplicate array item")
+        seen = set()
         for index, item in enumerate(value):
             _validate(item, rule["items"], root, f"{location}[{index}]")
+            # The published schema uses uniqueItems only for string arrays.
+            # Validate first so malformed/unhashable items remain CatalogErrors.
+            if rule.get("uniqueItems"):
+                if item in seen:
+                    fail("duplicate array item")
+                seen.add(item)
 
 
 def parse_catalog(text, origin="<catalog>"):
@@ -143,8 +164,6 @@ def merge_catalogs(documents, allow_overrides=False):
                     f"duplicate identity {identity}; use --allow-overrides for explicit last-pack-wins replacement"
                 )
             values = dict(record)
-            for sequence_field in ("references", "tags", "aliases"):
-                values[sequence_field] = tuple(values.get(sequence_field, ()))
             monsters[identity] = Monster(**values)
     return tuple(monsters[key] for key in sorted(monsters))
 

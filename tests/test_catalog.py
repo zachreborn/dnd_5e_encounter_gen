@@ -1,4 +1,6 @@
+import contextlib
 import copy
+import io
 import json
 import tempfile
 import unittest
@@ -7,6 +9,7 @@ from unittest.mock import patch
 
 from dnd_5e_encounter_gen.catalog import (
     CatalogError,
+    _validate,
     catalog_schema,
     load_catalog,
     load_default,
@@ -14,6 +17,8 @@ from dnd_5e_encounter_gen.catalog import (
     merge_catalogs,
     parse_catalog,
 )
+from dnd_5e_encounter_gen.cli import display
+from dnd_5e_encounter_gen.engine import generate_encounter
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -35,6 +40,97 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(monster.aliases, ("Green guardian",))
         self.assertEqual(monster.challenge_rating, "1/8")
         self.assertIn("encounter_hook", monster.extensions)
+
+    def test_unique_string_arrays_do_not_scan_all_preceding_items(self):
+        comparisons = 0
+
+        class CountedString(str):
+            __hash__ = str.__hash__
+
+            def __eq__(self, other):
+                nonlocal comparisons
+                comparisons += 1
+                if comparisons > 100_000:
+                    raise AssertionError("Uniqueness validation rescans preceding values")
+                return super().__eq__(other)
+
+        schema = catalog_schema()
+        rule = schema["$defs"]["monster"]["properties"]["tags"]
+        values = [CountedString(f"tag-{index}") for index in range(10_000)]
+        _validate(values, rule, schema, "tags")
+        self.assertLessEqual(comparisons, 100_000)
+        with self.assertRaisesRegex(CatalogError, "duplicate array item"):
+            _validate([*values, values[-1]], rule, schema, "tags")
+
+    def test_unique_items_schema_only_uses_strings(self):
+        def check(rule):
+            if isinstance(rule, dict):
+                if rule.get("uniqueItems"):
+                    self.assertEqual(rule["items"]["type"], "string")
+                for value in rule.values():
+                    check(value)
+            elif isinstance(rule, list):
+                for value in rule:
+                    check(value)
+
+        check(catalog_schema())
+
+    def test_unhashable_tag_and_alias_items_are_validation_errors(self):
+        for field in ("tags", "aliases"):
+            for item in ({}, []):
+                with self.subTest(field=field, item=item):
+                    doc = copy.deepcopy(self.example)
+                    doc["monsters"][0][field] = [item]
+                    with self.assertRaisesRegex(CatalogError, rf"{field}\[0\].*expected string"):
+                        self.parse(doc)
+
+    def test_merged_records_detach_and_recursively_freeze_metadata(self):
+        record = self.example["monsters"][0]
+        record["aliases"] = ["Green guardian"]
+        record["extensions"]["nested"] = {"notes": [{"text": "original"}], "empty": {}}
+        monster = merge_catalogs([self.example])[0]
+        record["references"][0].clear()
+        record["references"].clear()
+        record["tags"].append("changed")
+        record["aliases"].clear()
+        record["extensions"]["nested"]["notes"][0]["text"] = "changed"
+        record["extensions"]["nested"]["notes"].append({"text": "new"})
+        record["extensions"].clear()
+        self.assertEqual(monster.references[0]["publication"], "My campaign notes")
+        self.assertEqual(monster.tags, ("forest",))
+        self.assertEqual(monster.aliases, ("Green guardian",))
+        self.assertEqual(monster.extensions["nested"]["notes"][0]["text"], "original")
+        self.assertEqual(len(monster.extensions["nested"]["notes"]), 1)
+        with self.assertRaises(TypeError):
+            monster.references[0]["publication"] = "changed"
+        with self.assertRaises(TypeError):
+            monster.extensions["nested"]["notes"][0]["text"] = "changed"
+        with self.assertRaises(TypeError):
+            monster.extensions["nested"]["empty"]["new"] = True
+        with self.assertRaises(AttributeError):
+            monster.extensions["nested"]["notes"].append("new")
+        with contextlib.redirect_stdout(io.StringIO()) as output:
+            display(generate_encounter([monster], 4, 5), 4, 5, "moderate", "plant")
+        self.assertIn("My campaign notes", output.getvalue())
+
+    def test_direct_record_construction_freezes_tuple_contents(self):
+        from dataclasses import replace
+
+        monster = merge_catalogs([self.example])[0]
+        reference = {"publication": "Notes"}
+        nested = {"notes": ({"text": "original"},)}
+        replaced = replace(monster, references=(reference,), extensions=nested)
+        reference.clear()
+        nested["notes"][0].clear()
+        self.assertEqual(replaced.references[0]["publication"], "Notes")
+        self.assertEqual(replaced.extensions["notes"][0]["text"], "original")
+        with self.assertRaises(TypeError):
+            replaced.extensions["new"] = "value"
+
+    def test_metadata_freezing_depth_errors_are_reported(self):
+        with patch("dnd_5e_encounter_gen.catalog._freeze", side_effect=RecursionError("too deep")):
+            with self.assertRaisesRegex(CatalogError, "homebrew:moss-guardian.*nested too deeply"):
+                merge_catalogs([self.example])
 
     def test_invalid_record_fields(self):
         for field, value in (

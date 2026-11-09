@@ -28,6 +28,8 @@ third-party runtime dependencies. Development tools are in `.[dev]`.
 - `tests/`: standard-library unit tests and subprocess smoke tests.
 - `tests/fixtures/srd_index.json`: independently extracted official index.
 - `examples/homebrew.json`: complete custom pack example.
+- `.github/workflows/ci.yml`: CI workflow; pin actions to full commit hashes
+  with release-version comments and retain distinct matrix check names.
 - `pyproject.toml`: packaging, supported Python, development dependencies, lint
   and coverage. `setup.py` is only a shim; version is in `__init__.py`.
 

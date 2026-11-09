@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Encounter monster catalog, version 1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "pack_id", "pack_version", "source", "license", "monsters"],
+  "properties": {
+    "schema_version": {"type": "integer", "const": 1},
+    "pack_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9.-]*$"},
+    "pack_version": {"type": "string", "minLength": 1},
+    "source": {"$ref": "#/$defs/source"},
+    "license": {"type": "string", "minLength": 1},
+    "monsters": {"type": "array", "items": {"$ref": "#/$defs/monster"}}
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": ["title"],
+      "properties": {"title": {"type": "string", "minLength": 1}}
+    },
+    "reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["publication"],
+      "properties": {
+        "publication": {"type": "string", "minLength": 1},
+        "page": {"type": "string", "minLength": 1},
+        "url": {"type": "string", "pattern": "^https?://[^\\s]+$"}
+      }
+    },
+    "monster": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "challenge_rating", "xp", "size", "monster_type", "rules_revision"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9.-]*:[a-z0-9][a-z0-9-]*$"},
+        "name": {"type": "string", "minLength": 1},
+        "challenge_rating": {"type": "string", "pattern": "^(0|[1-9]|[12][0-9]|30|1/[248])$"},
+        "xp": {"type": "integer", "minimum": 0},
+        "size": {
+          "type": "string",
+          "pattern": "^(tiny|small|medium|large|huge|gargantuan|colossal)( or (tiny|small|medium|large|huge|gargantuan|colossal)| swarm of (tiny|small|medium|large|huge|gargantuan|colossal))?$"
+        },
+        "monster_type": {
+          "type": "string",
+          "enum": ["aberration", "beast", "celestial", "construct", "dragon", "elemental", "fey", "fiend", "giant", "humanoid", "monstrosity", "ooze", "plant", "undead"]
+        },
+        "rules_revision": {"type": "string", "minLength": 1},
+        "references": {"type": "array", "items": {"$ref": "#/$defs/reference"}},
+        "tags": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "aliases": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "extensions": {"type": "object"}
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+name: Tests and distributions
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.12", "3.13", "3.14", "3.15"]
+        os: [ubuntu-latest]
+        include:
+          - python: "3.15"
+            os: macos-latest
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install development tools
+        run: python -m pip install -e ".[dev]"
+      - name: Unit tests, catalog integrity and branch coverage
+        run: |
+          python -B -m coverage run -m unittest discover -s tests -v
+          python -B -m coverage report
+      - name: Lint and whitespace
+        run: |
+          ruff check .
+          git diff --check
+      - name: Separate subprocess smoke suite
+        run: python -B -m unittest discover -s tests/smoke -v
+      - name: Build wheel and source distribution
+        run: python -m build
+      - name: Clean installed-artifact and offline runtime smoke checks
+        run: python -B tools/check_distribution.py dist/*.whl dist/*.tar.gz

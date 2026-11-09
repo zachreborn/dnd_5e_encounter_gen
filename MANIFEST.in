@@ -1,0 +1,7 @@
+include dnd_5e_encounter_gen/NOTICE.txt
+recursive-include dnd_5e_encounter_gen/data *.json
+recursive-include examples *.json
+prune legacy
+prune tests
+prune tools
+global-exclude __pycache__ *.py[cod]

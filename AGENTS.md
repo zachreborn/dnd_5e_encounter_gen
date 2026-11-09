@@ -2,134 +2,133 @@
 
 ## Project overview
 
-This is a Python command-line random encounter generator for Dungeons & Dragons
-5th edition. It calculates an experience-point (XP) budget from party size, average
-level, and difficulty; chooses a random monster within an XP allowance; and adjusts
-the monster count for encounter size. It runs locally with static data and no
-runtime dependencies outside the Python standard library.
+Offline Python command-line random encounter generator for the 2024 revised
+fifth-edition rules. Python 3.12+; continuous checks target 3.12–3.15. No
+third-party runtime dependencies. Development tools are in `.[dev]`.
 
 ## Repository map
 
-- `dnd_5e_encounter_gen/random_encounter_builder.py`: interactive prompts,
-  `Monster`, XP budgeting, random selection, encounter sizing, and script entry
-  point.
-- `dnd_5e_encounter_gen/encounter_tables.py`: per-character difficulty thresholds
-  for levels 1–20 and the accepted monster-type filters.
-- `dnd_5e_encounter_gen/monsters.py`: `cr_dict`, the monster catalog grouped by
-  challenge rating.
-- `dnd_5e_encounter_gen/__init__.py`: package author and version metadata.
-- `setup.py`: setuptools packaging, with a legacy distutils fallback.
-- `README.md`: user-facing overview, sample interaction, and future ideas.
+- `dnd_5e_encounter_gen/catalog.py`: schema validation, JSON loading, immutable
+  monster records, explicit pack merging.
+- `dnd_5e_encounter_gen/engine.py`: pure budget and bounded encounter generation.
+- `dnd_5e_encounter_gen/encounter_tables.py`: three revised difficulty budgets.
+- `dnd_5e_encounter_gen/cli.py`: argument parsing, interactive prompts, output,
+  and exit codes.
+- `dnd_5e_encounter_gen/__main__.py`: module entry point.
+- `dnd_5e_encounter_gen/random_encounter_builder.py`: direct-script compatibility
+  launcher; not the old helper API.
+- `dnd_5e_encounter_gen/data/`: versioned open JSON catalog and JSON Schema.
+- `dnd_5e_encounter_gen/NOTICE.txt`: mandatory open-content attribution and code
+  licensing caveat. Do not remove from built artifacts.
+- `legacy/monsters.py`: original unverified 511-record catalog. Preserved for
+  migration only; excluded from wheel and source distributions.
+- `tools/extract_srd.py`: development-only Poppler extraction and index check.
+- `tools/migrate_legacy.py`: syntax-tree/literal conversion without execution.
+- `tools/check_distribution.py`: isolated installed-artifact smoke checks.
+- `tests/`: standard-library unit tests and subprocess smoke tests.
+- `tests/fixtures/srd_index.json`: independently extracted official index.
+- `examples/homebrew.json`: complete custom pack example.
+- `pyproject.toml`: packaging, supported Python, development dependencies, lint
+  and coverage. `setup.py` is only a shim; version is in `__init__.py`.
 
-## Running the program
+## Running and validation
 
-Run commands from the repository root:
+From the repository root:
 
 ```fish
+python3 -B -m dnd_5e_encounter_gen
+python3 -B -m dnd_5e_encounter_gen --party-size 4 --level 5 --seed 42
 python3 -B dnd_5e_encounter_gen/random_encounter_builder.py
+python3 -B -m dnd_5e_encounter_gen --validate-catalog
+printf '4\n5\n\n\nn\n' | python3 -B -m dnd_5e_encounter_gen
 ```
 
-No installation is needed for this launch method. The README's shorter
-`python random_encounter_builder.py` command assumes the package directory is the
-working directory.
+Installed command: `dnd-encounter`. Package-relative imports and resource loading
+must work outside the checkout. Do not reintroduce bare sibling imports.
 
-The builder uses bare sibling imports (`import monsters` and
-`import encounter_tables`). Direct script execution supplies the required import
-path; package import and `python3 -m dnd_5e_encounter_gen.random_encounter_builder`
-are not currently supported by those imports. Do not recommend an installed
-console command: `setup.py` defines no console entry point.
-
-The README describes Python 3.4, but there is no declared minimum version,
-supported-version matrix, or pinned interpreter. Do not treat that historical
-description as a verified compatibility guarantee. Avoid silently requiring a
-newer Python version when making unrelated changes.
-
-## Implementation conventions and contracts
-
-- Follow the existing four-space indentation, snake_case functions and variables,
-  `Monster` class naming, and surrounding string/formatting style. Avoid
-  repository-wide reformatting or dependency additions for small changes.
-- Keep monster data in `monsters.py` and difficulty/type tables in
-  `encounter_tables.py`, rather than duplicating them in the builder.
-- Each `cr_dict` entry maps a unique monster name to exactly five positional
-  values: `[page_reference, challenge_rating, xp, size, monster_type]`.
-  `main()` expands these into `Monster(name, *values)`; preserve that order.
-- Page references may be integers or strings such as `'MaD 31'`. Challenge ratings
-  are strings, including fractions such as `'1/8'`. XP values are positive
-  integers. Preserve supplementary catalog entries and string references.
-- Difficulty keys are `easy`, `medium`, `hard`, and `deadly`. Each threshold list
-  has 20 entries, indexed by `party_level - 1`; `xp_budget()` multiplies the
-  threshold by party size. Valid levels are 1–20 and party size must be positive.
-- Filter choices are lowercase, including the special value `all`. Selection
-  compares a specific filter's capitalized spelling with the catalog's type
-  field. Keep accepted choices and catalog types aligned.
-- `xp_list_gen()` randomly chooses a budget divisor of at least 10 whose quotient
-  is at most 20. `rnd_select_monster()` selects among monsters at the nearest
-  eligible XP value without exceeding that allowance.
-- `build_encounter_size()` applies the existing count thresholds and multipliers,
-  including a special adjustment for parties of one or two. Treat changes to
-  these rules as behavior changes requiring focused tests.
-- `main()` populates the module-level `monsters_dict` before starting
-  `script_run()`. Importing the module alone does not populate that dictionary.
-- Repeating an encounter reuses the original party and filter inputs; it does
-  not prompt for a new party on each iteration.
-- Version metadata currently appears in both `setup.py` and `__init__.py`.
-  Update both if a requested change includes a version bump.
-
-## Validation
-
-There are no tracked automated tests, continuous integration workflows, formatter
-settings, or lint/type-check commands. Do not claim that a test suite passed when
-only a smoke check was run, and do not assume pytest or other tools are installed.
-
-A basic end-to-end smoke check uses four level-five characters, the default
-medium difficulty, the default all-types filter, and exits after one encounter:
+Use a virtual environment; never install into a managed system Python:
 
 ```fish
-printf '4\n5\n\n\nn\n' | python3 -B dnd_5e_encounter_gen/random_encounter_builder.py
+python3 -m venv .venv
+.venv/bin/python -m pip install -e '.[dev]'
+.venv/bin/python -B -m unittest discover -s tests -v
+.venv/bin/python -B -m unittest discover -s tests/smoke -v
+.venv/bin/python -B -m coverage run -m unittest discover -s tests -v
+.venv/bin/python -B -m coverage report
+.venv/bin/ruff check .
+.venv/bin/python -m build
+.venv/bin/python -B tools/check_distribution.py dist/*.whl dist/*.tar.gz
+git diff --check
 ```
 
-Expect party details, a monster count/name, a page reference, and a repeat prompt.
-The monster and count vary randomly; do not assert an exact unseeded result.
-The `-B` flag avoids leaving bytecode artifacts in this repository.
+Default discovery includes smoke tests. Subprocesses must have timeouts. Tests
+must control randomness or assert invariants rather than exact unseeded results.
+Coverage measures branches with a 90% floor. Full schema parity needs the
+development-only `jsonschema` package; without it that one check is skipped.
+Do not describe a skipped check or an unrun platform matrix as passed.
 
-For behavior changes, add focused regression tests. Standard-library `unittest`
-is an option without a new dependency, not an existing project test convention.
-When testing the builder without changing its imports, explicitly make the
-package directory available on the test import path. Initialize or clear
-`monsters_dict` as needed to isolate tests. Control randomness with a fixed seed
-or mocks, and mock `input()` for prompt tests.
+## Rules and generation contracts
 
-Cover the relevant budget boundaries, each difficulty, small-party count
-adjustments, all-types and specific-type selection, and invalid/default inputs.
-For catalog/table changes, verify record shape, positive XP, type consistency,
-unique dictionary keys, and 20 thresholds per difficulty.
+- Difficulties are `low`, `moderate`, `high`; default `moderate`. Budgets are
+  independently transcribed from SRD 5.2.1 p.202, 20 levels each.
+- Party size is positive, average level is 1–20. No legacy monster-count or
+  small-party multipliers. Do not silently alias legacy difficulty names.
+- Generation chooses one feasible creature and its greatest count under both
+  budget and `max_monsters` (default 20). Mixed groups are not implemented.
+- Require positive counts and experience spend no greater than budget.
+  Zero-XP creatures are valid data but excluded from automatic generation.
+- Empty or impossible filters raise `EncounterError`; never silently relax a
+  filter or return an empty encounter.
+- Inject a local random-number generator and sort candidates by stable IDs.
+  Never use global mutable catalog initialization or randomness.
+- Output reports requested difficulty, spend, and unused budget, not a false
+  exact difficulty match. Retain danger/count/lair warnings and balance caveats.
+- Repeating an encounter reuses party/filter inputs and advances the generator.
+- Exit codes are 0 for success/clean EOF, 2 for user/catalog/encounter errors,
+  and 130 for interruption. Normal input errors must not print tracebacks.
 
-## Existing limitations to account for
+## Catalog and source contracts
 
-- `get_user_input_str()` uses `val is ''` instead of an equality comparison.
-  Modern Python can emit a `SyntaxWarning`; do not copy this pattern into new
-  code or conceal the warning as a documentation fix.
-- A specific monster type may have no monster within the chosen allowance.
-  Selection then calls `min()` on an empty collection and raises `ValueError`.
-- Integer prompts reject non-integers but do not enforce valid party ranges.
-  Range validation happens later in `xp_budget()`, and the interactive loop does
-  not catch that exception.
-- Although the monster-type prompt mentions `?`, it is not an accepted choice
-  and does not display help.
-- `xp_list_gen()` assumes a usable positive budget; arbitrary values with no
-  eligible divisors can fail. Test its actual preconditions when changing it.
-
-Keep unrelated bug fixes separate from documentation or data-only tasks. Update
-the README when deliberately changing launch instructions or user-visible behavior.
+- JSON only. Version-one envelope and named records are defined in the bundled
+  schema. Preserve one source of truth: the small runtime schema interpreter and
+  full-validator parity tests must be extended together with any schema changes.
+- IDs are pack-qualified; never key by display name alone. Duplicate JSON keys
+  and in-pack identities are errors. Cross-pack overrides require explicit
+  `--allow-overrides`, with later packs winning. Bundled data loads first.
+- Preserve exact challenge-rating strings, nonnegative integer experience,
+  source revisions, optional string page references, aliases, tags, and custom
+  extensions. Runtime rejects booleans and float tokens as integer fields.
+- Never execute a catalog, follow reference URLs, or download content at runtime.
+  Keep catalog size/error handling and tests for malformed data.
+- Bundle all 330 indexed SRD 5.2.1 stat blocks plus 27 explicit lair variants
+  (357 records). This does NOT mean the entire commercial Monster Manual.
+  Additional content needs authorized user-supplied packs.
+- Verify source names, pages and metadata against the versioned official
+  document, the independent index manifest and the challenge-rating reward
+  table. Do not generate an expected fixture from the same parsed catalog.
+- Preserve the source's Archmage discrepancy: p.305 says 8,000 experience;
+  the general rating-12 table says 8,400. The record includes an explicit note.
+  Lair variants use their printed higher reward with the base challenge rating.
+- Retain the exact required Creative Commons Attribution 4.0 notice and
+  document adaptations. Source checksum/extraction provenance must be updated
+  deliberately. Automated source checks are not an independent human review.
+- The code's prior “BSD” declaration has no tracked license text. Do not choose
+  a license variant or imply a new grant without the owner's decision.
+- Keep unverified legacy data out of distributable artifacts. Migration must
+  preserve all five original positional values per record and supplementary
+  string references, without relabeling them as modern/open content.
 
 ## Change hygiene
 
-- Work on a dedicated branch; never commit directly to `master` or `main`.
-  Use `git branch` to create a branch and `git switch` to change branches.
-- Keep changes focused and preserve existing user work. Do not commit or push
-  unless requested; any requested commits must be signed.
-- Do not add credentials, environment dumps, virtual environments, bytecode,
-  build directories, or generated packaging metadata to version control.
-- Before handing off, run applicable checks, inspect `git diff --check` and the
-  final diff, and report what was verified and any known failures separately.
+- Follow four-space indentation and focused, readable changes. Keep rules, data,
+  domain logic and presentation separated.
+- Work on a dedicated branch. Use `git branch` then `git switch`; never commit
+  directly to main/master.
+- Preserve user work. Do not commit or push unless requested; all requested
+  commits must be signed.
+- Do not track credentials, environment dumps, virtual environments, private
+  catalogs, bytecode, build artifacts, or generated package metadata.
+- Review final diff and `git diff --check`, run applicable tests/lint/build/
+  installed-artifact checks, and report actual results and limitations.
+- Update `README.md` and this guide when changing behavior, launch paths,
+  data contracts, or supported validation commands.

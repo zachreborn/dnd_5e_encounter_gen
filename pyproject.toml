@@ -12,7 +12,7 @@ authors = [{name = "Zachary Hill"}]
 license-files = ["dnd_5e_encounter_gen/NOTICE.txt"]
 
 [project.urls]
-Repository = "https://github.com/zachreborn/dnd_5e_encounter_gen"
+Repository = "https://github.com/zachreborn/dnd_encounter_generator"
 
 [project.scripts]
 dnd-encounter = "dnd_5e_encounter_gen.cli:main"

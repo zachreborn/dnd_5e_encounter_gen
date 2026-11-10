@@ -1,9 +1,15 @@
-# Revised fifth-edition encounter generator
+# Dungeons & Dragons Encounter Generator
 
 An offline Python encounter generator for the **2024 revised fifth-edition
 Dungeons & Dragons rules**, with customizable JSON monster catalogs.
 Requires **Python 3.12 or newer**; automated checks target Python 3.12–3.15.
 There are no third-party runtime dependencies.
+
+Repository: [dnd_encounter_generator](https://github.com/zachreborn/dnd_encounter_generator).
+The edition-neutral repository name leaves room for future rules support; the
+current implementation supports the 2024 revised fifth-edition rules.
+The Python package and distribution remain `dnd_5e_encounter_gen`, and the
+installed command remains `dnd-encounter`, preserving existing usage.
 
 ## Rules and monster coverage
 

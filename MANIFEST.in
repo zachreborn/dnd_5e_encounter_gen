@@ -1,5 +1,5 @@
-include dnd_5e_encounter_gen/NOTICE.txt
-recursive-include dnd_5e_encounter_gen/data *.json
+include dnd_encounter_generator/NOTICE.txt
+recursive-include dnd_encounter_generator/data *.json
 recursive-include examples *.json
 prune legacy
 prune tests

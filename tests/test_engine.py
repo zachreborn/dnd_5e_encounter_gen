@@ -2,8 +2,8 @@ import random
 import unittest
 from dataclasses import replace
 
-from dnd_5e_encounter_gen.catalog import load_monsters, monster_types
-from dnd_5e_encounter_gen.engine import EncounterError, generate_encounter, xp_budget
+from dnd_encounter_generator.catalog import load_monsters, monster_types
+from dnd_encounter_generator.engine import EncounterError, generate_encounter, xp_budget
 
 
 class BudgetTests(unittest.TestCase):

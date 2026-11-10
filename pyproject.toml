@@ -3,32 +3,32 @@ requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "dnd_5e_encounter_gen"
+name = "dnd_encounter_generator"
 dynamic = ["version"]
 description = "Offline revised fifth-edition encounter generator with customizable JSON catalogs"
 readme = "README.md"
 requires-python = ">=3.12"
 authors = [{name = "Zachary Hill"}]
-license-files = ["dnd_5e_encounter_gen/NOTICE.txt"]
+license-files = ["dnd_encounter_generator/NOTICE.txt"]
 
 [project.urls]
 Repository = "https://github.com/zachreborn/dnd_encounter_generator"
 
 [project.scripts]
-dnd-encounter = "dnd_5e_encounter_gen.cli:main"
+dnd-encounter = "dnd_encounter_generator.cli:main"
 
 [project.optional-dependencies]
 dev = ["build>=1.2,<2", "coverage>=7.6,<8", "ruff>=0.9,<1", "jsonschema>=4.23,<5"]
 
 [tool.setuptools]
-packages = ["dnd_5e_encounter_gen", "dnd_5e_encounter_gen.data"]
+packages = ["dnd_encounter_generator", "dnd_encounter_generator.data"]
 include-package-data = true
 
 [tool.setuptools.dynamic]
-version = {attr = "dnd_5e_encounter_gen.__version__"}
+version = {attr = "dnd_encounter_generator.__version__"}
 
 [tool.setuptools.package-data]
-dnd_5e_encounter_gen = ["data/*.json", "NOTICE.txt"]
+dnd_encounter_generator = ["data/*.json", "NOTICE.txt"]
 
 [tool.ruff]
 target-version = "py312"
@@ -40,7 +40,7 @@ select = ["E4", "E7", "E9", "F", "I"]
 
 [tool.coverage.run]
 branch = true
-source = ["dnd_5e_encounter_gen"]
+source = ["dnd_encounter_generator"]
 omit = ["*/__main__.py", "*/random_encounter_builder.py"]
 
 [tool.coverage.report]

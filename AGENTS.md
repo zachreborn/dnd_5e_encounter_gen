@@ -6,19 +6,24 @@ Offline Python command-line random encounter generator for the 2024 revised
 fifth-edition rules. Python 3.12+; continuous checks target 3.12–3.15. No
 third-party runtime dependencies. Development tools are in `.[dev]`.
 
+The source package and distribution are `dnd_encounter_generator`, matching the
+repository. The former `dnd_5e_encounter_gen` import/module path is retired; the
+installed `dnd-encounter` command is unchanged. Keep metadata, package-resource
+lookups, smoke checks, and documentation aligned with the new package name.
+
 ## Repository map
 
-- `dnd_5e_encounter_gen/catalog.py`: schema validation, JSON loading, immutable
+- `dnd_encounter_generator/catalog.py`: schema validation, JSON loading, immutable
   monster records, explicit pack merging.
-- `dnd_5e_encounter_gen/engine.py`: pure budget and bounded encounter generation.
-- `dnd_5e_encounter_gen/encounter_tables.py`: three revised difficulty budgets.
-- `dnd_5e_encounter_gen/cli.py`: argument parsing, interactive prompts, output,
+- `dnd_encounter_generator/engine.py`: pure budget and bounded encounter generation.
+- `dnd_encounter_generator/encounter_tables.py`: three revised difficulty budgets.
+- `dnd_encounter_generator/cli.py`: argument parsing, interactive prompts, output,
   and exit codes.
-- `dnd_5e_encounter_gen/__main__.py`: module entry point.
-- `dnd_5e_encounter_gen/random_encounter_builder.py`: direct-script compatibility
+- `dnd_encounter_generator/__main__.py`: module entry point.
+- `dnd_encounter_generator/random_encounter_builder.py`: direct-script compatibility
   launcher; not the old helper API.
-- `dnd_5e_encounter_gen/data/`: versioned open JSON catalog and JSON Schema.
-- `dnd_5e_encounter_gen/NOTICE.txt`: mandatory open-content attribution and code
+- `dnd_encounter_generator/data/`: versioned open JSON catalog and JSON Schema.
+- `dnd_encounter_generator/NOTICE.txt`: mandatory open-content attribution and code
   licensing caveat. Do not remove from built artifacts.
 - `legacy/monsters.py`: original unverified 511-record catalog. Preserved for
   migration only; excluded from wheel and source distributions.
@@ -38,11 +43,11 @@ third-party runtime dependencies. Development tools are in `.[dev]`.
 From the repository root:
 
 ```fish
-python3 -B -m dnd_5e_encounter_gen
-python3 -B -m dnd_5e_encounter_gen --party-size 4 --level 5 --seed 42
-python3 -B dnd_5e_encounter_gen/random_encounter_builder.py
-python3 -B -m dnd_5e_encounter_gen --validate-catalog
-printf '4\n5\n\n\nn\n' | python3 -B -m dnd_5e_encounter_gen
+python3 -B -m dnd_encounter_generator
+python3 -B -m dnd_encounter_generator --party-size 4 --level 5 --seed 42
+python3 -B dnd_encounter_generator/random_encounter_builder.py
+python3 -B -m dnd_encounter_generator --validate-catalog
+printf '4\n5\n\n\nn\n' | python3 -B -m dnd_encounter_generator
 ```
 
 Installed command: `dnd-encounter`. Package-relative imports and resource loading

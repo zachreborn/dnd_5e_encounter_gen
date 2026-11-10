@@ -20,6 +20,8 @@ def command(arguments, cwd, inputs=None):
 
 
 def check(artifact):
+    if not artifact.name.startswith("dnd_encounter_generator-"):
+        raise RuntimeError(f"{artifact.name}: unexpected distribution name")
     if artifact.suffix == ".whl":
         with zipfile.ZipFile(artifact) as archive:
             names = archive.namelist()
@@ -37,7 +39,7 @@ def check(artifact):
         venv.create(environment, with_pip=True)
         python = str(environment / "bin/python")
         command([python, "-I", "-m", "pip", "install", "--no-deps", str(artifact)], root)
-        module = [python, "-I", "-B", "-m", "dnd_5e_encounter_gen"]
+        module = [python, "-I", "-B", "-m", "dnd_encounter_generator"]
         output = command([*module, "--party-size", "4", "--level", "5", "--seed", "42"], root)
         if "Budget: 3000 XP" not in output:
             raise RuntimeError("Incorrect installed generation result")
@@ -53,9 +55,11 @@ def check(artifact):
         # networking for build tools, but catalog loading and generation must not.
         offline = (
             "import socket; from unittest.mock import patch; "
+            "from importlib.metadata import metadata; "
             "from importlib.resources import files; "
-            "from dnd_5e_encounter_gen.cli import main; "
-            "assert 'Creative Commons' in files('dnd_5e_encounter_gen').joinpath('NOTICE.txt').read_text(); "
+            "from dnd_encounter_generator.cli import main; "
+            "assert metadata('dnd_encounter_generator')['Name'].replace('-', '_') == 'dnd_encounter_generator'; "
+            "assert 'Creative Commons' in files('dnd_encounter_generator').joinpath('NOTICE.txt').read_text(); "
             "p=patch.object(socket, 'socket', side_effect=AssertionError('network forbidden')); "
             "p.start(); raise SystemExit(main(['--party-size','4','--level','5']))"
         )

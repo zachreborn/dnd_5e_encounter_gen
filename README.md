@@ -8,8 +8,9 @@ There are no third-party runtime dependencies.
 Repository: [dnd_encounter_generator](https://github.com/zachreborn/dnd_encounter_generator).
 The edition-neutral repository name leaves room for future rules support; the
 current implementation supports the 2024 revised fifth-edition rules.
-The Python package and distribution remain `dnd_5e_encounter_gen`, and the
-installed command remains `dnd-encounter`, preserving existing usage.
+The Python package and distribution are now `dnd_encounter_generator`, matching
+the repository name. Update old `dnd_5e_encounter_gen` imports and `python -m`
+commands to the new name. The installed `dnd-encounter` command is unchanged.
 
 ## Rules and monster coverage
 
@@ -50,13 +51,13 @@ and location filtering are not implemented.
 From the repository root:
 
 ```fish
-python3 -B -m dnd_5e_encounter_gen
+python3 -B -m dnd_encounter_generator
 ```
 
-The older direct-script launch path remains available:
+Direct script execution is also available under the renamed package:
 
 ```fish
-python3 -B dnd_5e_encounter_gen/random_encounter_builder.py
+python3 -B dnd_encounter_generator/random_encounter_builder.py
 ```
 
 Interactive mode prompts for party size, average level (1–20), difficulty, and
@@ -66,7 +67,7 @@ reuses party settings and advances the random generator.
 For a single noninteractive encounter:
 
 ```fish
-python3 -B -m dnd_5e_encounter_gen --party-size 4 --level 5 --difficulty moderate --type undead --seed 42
+python3 -B -m dnd_encounter_generator --party-size 4 --level 5 --difficulty moderate --type undead --seed 42
 ```
 
 Supply `--party-size` and `--level` together. `--seed` reproduces a sequence for
@@ -93,7 +94,7 @@ also runs from any working directory; catalogs are loaded as package resources.
 
 Copy `examples/homebrew.json` into a private location and edit its named fields.
 JSON is the canonical format; YAML is not supported in this release.
-The schema is `dnd_5e_encounter_gen/data/catalog.schema.json`.
+The schema is `dnd_encounter_generator/data/catalog.schema.json`.
 
 Each pack supplies `schema_version` (currently `1`), `pack_id`, `pack_version`,
 `source` (at least a title), `license`, and a `monsters` array. Each monster
@@ -132,7 +133,7 @@ changing encounter generation.
 Validate a pack without starting an encounter:
 
 ```fish
-python3 -B -m dnd_5e_encounter_gen --no-default-catalog --catalog examples/homebrew.json --validate-catalog
+python3 -B -m dnd_encounter_generator --no-default-catalog --catalog examples/homebrew.json --validate-catalog
 ```
 
 To add a pack to the open default catalog, use `--catalog PATH`. Repeat that
@@ -165,7 +166,7 @@ repository:
 
 ```fish
 python3 -B tools/migrate_legacy.py legacy/monsters.py /absolute/private/path/legacy.json
-python3 -B -m dnd_5e_encounter_gen --no-default-catalog --catalog /absolute/private/path/legacy.json --validate-catalog
+python3 -B -m dnd_encounter_generator --no-default-catalog --catalog /absolute/private/path/legacy.json --validate-catalog
 ```
 
 The destination must not already exist. The converter reads literal dictionary
@@ -198,7 +199,7 @@ To reproduce extraction, obtain the version-pinned PDF from the official
 [SRD page](https://www.dndbeyond.com/srd), install Poppler's `pdftotext`, then run:
 
 ```fish
-python3 -B tools/extract_srd.py /path/to/SRD_CC_v5.2.1.pdf dnd_5e_encounter_gen/data/srd_5_2_1.json --index-manifest tests/fixtures/srd_index.json
+python3 -B tools/extract_srd.py /path/to/SRD_CC_v5.2.1.pdf dnd_encounter_generator/data/srd_5_2_1.json --index-manifest tests/fixtures/srd_index.json
 ```
 
 PDF tooling is development-only. Review source changes and catalog diffs before
@@ -241,7 +242,7 @@ Development-only dependencies do not become runtime requirements.
 
 This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.
 
-See `dnd_5e_encounter_gen/NOTICE.txt` for adaptations and licensing boundaries.
+See `dnd_encounter_generator/NOTICE.txt` for adaptations and licensing boundaries.
 The original code metadata said “BSD” without a license text. The repository
 owner must clarify the code license before public redistribution; the open game
 content license does not license application code.

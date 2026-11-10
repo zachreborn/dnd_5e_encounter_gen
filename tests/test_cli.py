@@ -4,9 +4,9 @@ import unittest
 from dataclasses import replace
 from unittest.mock import patch
 
-from dnd_5e_encounter_gen import cli
-from dnd_5e_encounter_gen.catalog import load_monsters
-from dnd_5e_encounter_gen.engine import generate_encounter
+from dnd_encounter_generator import cli
+from dnd_encounter_generator.catalog import load_monsters
+from dnd_encounter_generator.engine import generate_encounter
 
 
 class CliTests(unittest.TestCase):

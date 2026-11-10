@@ -6,12 +6,12 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-PACKAGE = ROOT / "dnd_5e_encounter_gen"
+PACKAGE = ROOT / "dnd_encounter_generator"
 
 
 class CommandSmokeTests(unittest.TestCase):
     def command(self, *args, inputs=None, direct=False, cwd=ROOT):
-        target = [str(PACKAGE / "random_encounter_builder.py")] if direct else ["-m", "dnd_5e_encounter_gen"]
+        target = [str(PACKAGE / "random_encounter_builder.py")] if direct else ["-m", "dnd_encounter_generator"]
         return subprocess.run(
             [sys.executable, "-B", *target, *args], input=inputs,
             capture_output=True, text=True, timeout=15, cwd=cwd,

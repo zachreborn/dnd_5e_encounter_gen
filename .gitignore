@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+.coverage
+htmlcov/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+private-catalogs/

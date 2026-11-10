@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "pack_id": "homebrew",
+  "pack_version": "1",
+  "source": {"title": "Example homebrew; replace with your own creatures"},
+  "license": "CC0-1.0",
+  "monsters": [
+    {
+      "id": "homebrew:moss-guardian",
+      "name": "Moss Guardian",
+      "challenge_rating": "1",
+      "xp": 200,
+      "size": "medium",
+      "monster_type": "plant",
+      "rules_revision": "2024-homebrew",
+      "references": [{"publication": "My campaign notes", "page": "Forest 1"}],
+      "tags": ["forest"],
+      "extensions": {"encounter_hook": "Protects a forgotten grove."}
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+Open game content
+=================
+This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.
+
+Adaptations: monster stat blocks are reduced to encounter-selection metadata,
+names/types/sizes are normalized for structured data, and higher in-lair
+experience rewards are represented as explicitly tagged variants. The encounter
+budget table is transcribed from page 202. No complete stat blocks are included.
+
+The bundled catalog covers the open SRD, not the entire commercial Monster Manual.
+Example homebrew data in examples/homebrew.json is dedicated under CC0-1.0:
+https://creativecommons.org/publicdomain/zero/1.0/
+
+Code licensing
+==============
+The original setup.py declared "BSD" but did not provide a license text.
+This modernization does not select a BSD variant or grant a new code license.
+The repository owner must clarify code licensing before public redistribution.
+The open game content license above does not license the application code.

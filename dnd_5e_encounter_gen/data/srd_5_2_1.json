@@ -1,0 +1,5812 @@
+{
+  "schema_version": 1,
+  "pack_id": "srd-5.2.1",
+  "pack_version": "1",
+  "source": {
+    "title": "System Reference Document 5.2.1",
+    "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+    "sha256": "8974902d109d6e63672d7c490bde9ccf052410503d9cfa768237154fbc5e3d87",
+    "extractor_version": "1",
+    "verification_date": "2026-11-09",
+    "verification": "Stat-block identities and pages checked against the independent PDF index."
+  },
+  "license": "CC-BY-4.0",
+  "monsters": [
+    {
+      "id": "srd-5.2.1:aboleth",
+      "name": "Aboleth",
+      "size": "large",
+      "monster_type": "aberration",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "258",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "10",
+      "xp": 5900
+    },
+    {
+      "id": "srd-5.2.1:aboleth-in-lair",
+      "name": "Aboleth (in lair)",
+      "size": "large",
+      "monster_type": "aberration",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "258",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "10",
+      "xp": 7200,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:adult-black-dragon",
+      "name": "Adult Black Dragon",
+      "size": "huge",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "264",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "14",
+      "xp": 11500
+    },
+    {
+      "id": "srd-5.2.1:adult-black-dragon-in-lair",
+      "name": "Adult Black Dragon (in lair)",
+      "size": "huge",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "264",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "14",
+      "xp": 13000,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:adult-blue-dragon",
+      "name": "Adult Blue Dragon",
+      "size": "huge",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "266",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "16",
+      "xp": 15000
+    },
+    {
+      "id": "srd-5.2.1:adult-blue-dragon-in-lair",
+      "name": "Adult Blue Dragon (in lair)",
+      "size": "huge",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "266",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "16",
+      "xp": 18000,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:adult-brass-dragon",
+      "name": "Adult Brass Dragon",
+      "size": "huge",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "268",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "13",
+      "xp": 10000
+    },
+    {
+      "id": "srd-5.2.1:adult-brass-dragon-in-lair",
+      "name": "Adult Brass Dragon (in lair)",
+      "size": "huge",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "268",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "13",
+      "xp": 11500,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:adult-bronze-dragon",
+      "name": "Adult Bronze Dragon",
+      "size": "huge",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "270",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "15",
+      "xp": 13000
+    },
+    {
+      "id": "srd-5.2.1:adult-bronze-dragon-in-lair",
+      "name": "Adult Bronze Dragon (in lair)",
+      "size": "huge",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "270",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "15",
+      "xp": 15000,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:adult-copper-dragon",
+      "name": "Adult Copper Dragon",
+      "size": "huge",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "276",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "14",
+      "xp": 11500
+    },
+    {
+      "id": "srd-5.2.1:adult-copper-dragon-in-lair",
+      "name": "Adult Copper Dragon (in lair)",
+      "size": "huge",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "276",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "14",
+      "xp": 13000,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:adult-gold-dragon",
+      "name": "Adult Gold Dragon",
+      "size": "huge",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "291",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "17",
+      "xp": 18000
+    },
+    {
+      "id": "srd-5.2.1:adult-gold-dragon-in-lair",
+      "name": "Adult Gold Dragon (in lair)",
+      "size": "huge",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "291",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "17",
+      "xp": 20000,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:adult-green-dragon",
+      "name": "Adult Green Dragon",
+      "size": "huge",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "294",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "15",
+      "xp": 13000
+    },
+    {
+      "id": "srd-5.2.1:adult-green-dragon-in-lair",
+      "name": "Adult Green Dragon (in lair)",
+      "size": "huge",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "294",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "15",
+      "xp": 15000,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:adult-red-dragon",
+      "name": "Adult Red Dragon",
+      "size": "huge",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "318",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "17",
+      "xp": 18000
+    },
+    {
+      "id": "srd-5.2.1:adult-red-dragon-in-lair",
+      "name": "Adult Red Dragon (in lair)",
+      "size": "huge",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "318",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "17",
+      "xp": 20000,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:adult-silver-dragon",
+      "name": "Adult Silver Dragon",
+      "size": "huge",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "324",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "16",
+      "xp": 15000
+    },
+    {
+      "id": "srd-5.2.1:adult-silver-dragon-in-lair",
+      "name": "Adult Silver Dragon (in lair)",
+      "size": "huge",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "324",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "16",
+      "xp": 18000,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:adult-white-dragon",
+      "name": "Adult White Dragon",
+      "size": "huge",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "340",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "13",
+      "xp": 10000
+    },
+    {
+      "id": "srd-5.2.1:adult-white-dragon-in-lair",
+      "name": "Adult White Dragon (in lair)",
+      "size": "huge",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "340",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "13",
+      "xp": 11500,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:air-elemental",
+      "name": "Air Elemental",
+      "size": "large",
+      "monster_type": "elemental",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "258",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:allosaurus",
+      "name": "Allosaurus",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "344",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:ancient-black-dragon",
+      "name": "Ancient Black Dragon",
+      "size": "gargantuan",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "265",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "21",
+      "xp": 33000
+    },
+    {
+      "id": "srd-5.2.1:ancient-black-dragon-in-lair",
+      "name": "Ancient Black Dragon (in lair)",
+      "size": "gargantuan",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "265",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "21",
+      "xp": 41000,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:ancient-blue-dragon",
+      "name": "Ancient Blue Dragon",
+      "size": "gargantuan",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "267",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "23",
+      "xp": 50000
+    },
+    {
+      "id": "srd-5.2.1:ancient-blue-dragon-in-lair",
+      "name": "Ancient Blue Dragon (in lair)",
+      "size": "gargantuan",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "267",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "23",
+      "xp": 62000,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:ancient-brass-dragon",
+      "name": "Ancient Brass Dragon",
+      "size": "gargantuan",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "269",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "20",
+      "xp": 25000
+    },
+    {
+      "id": "srd-5.2.1:ancient-brass-dragon-in-lair",
+      "name": "Ancient Brass Dragon (in lair)",
+      "size": "gargantuan",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "269",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "20",
+      "xp": 33000,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:ancient-bronze-dragon",
+      "name": "Ancient Bronze Dragon",
+      "size": "gargantuan",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "271",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "22",
+      "xp": 41000
+    },
+    {
+      "id": "srd-5.2.1:ancient-bronze-dragon-in-lair",
+      "name": "Ancient Bronze Dragon (in lair)",
+      "size": "gargantuan",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "271",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "22",
+      "xp": 50000,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:ancient-copper-dragon",
+      "name": "Ancient Copper Dragon",
+      "size": "gargantuan",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "277",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "21",
+      "xp": 33000
+    },
+    {
+      "id": "srd-5.2.1:ancient-copper-dragon-in-lair",
+      "name": "Ancient Copper Dragon (in lair)",
+      "size": "gargantuan",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "277",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "21",
+      "xp": 41000,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:ancient-gold-dragon",
+      "name": "Ancient Gold Dragon",
+      "size": "gargantuan",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "292",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "24",
+      "xp": 62000
+    },
+    {
+      "id": "srd-5.2.1:ancient-gold-dragon-in-lair",
+      "name": "Ancient Gold Dragon (in lair)",
+      "size": "gargantuan",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "292",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "24",
+      "xp": 75000,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:ancient-green-dragon",
+      "name": "Ancient Green Dragon",
+      "size": "gargantuan",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "294",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "22",
+      "xp": 41000
+    },
+    {
+      "id": "srd-5.2.1:ancient-green-dragon-in-lair",
+      "name": "Ancient Green Dragon (in lair)",
+      "size": "gargantuan",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "294",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "22",
+      "xp": 50000,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:ancient-red-dragon",
+      "name": "Ancient Red Dragon",
+      "size": "gargantuan",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "319",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "24",
+      "xp": 62000
+    },
+    {
+      "id": "srd-5.2.1:ancient-red-dragon-in-lair",
+      "name": "Ancient Red Dragon (in lair)",
+      "size": "gargantuan",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "319",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "24",
+      "xp": 75000,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:ancient-silver-dragon",
+      "name": "Ancient Silver Dragon",
+      "size": "gargantuan",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "325",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "23",
+      "xp": 50000
+    },
+    {
+      "id": "srd-5.2.1:ancient-silver-dragon-in-lair",
+      "name": "Ancient Silver Dragon (in lair)",
+      "size": "gargantuan",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "325",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "23",
+      "xp": 62000,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:ancient-white-dragon",
+      "name": "Ancient White Dragon",
+      "size": "gargantuan",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "341",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "20",
+      "xp": 25000
+    },
+    {
+      "id": "srd-5.2.1:ancient-white-dragon-in-lair",
+      "name": "Ancient White Dragon (in lair)",
+      "size": "gargantuan",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "341",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "20",
+      "xp": 33000,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:animated-armor",
+      "name": "Animated Armor",
+      "size": "medium",
+      "monster_type": "construct",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "259",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:animated-flying-sword",
+      "name": "Animated Flying Sword",
+      "size": "small",
+      "monster_type": "construct",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "259",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:animated-rug-of-smothering",
+      "name": "Animated Rug of Smothering",
+      "size": "large",
+      "monster_type": "construct",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "259",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:ankheg",
+      "name": "Ankheg",
+      "size": "large",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "259",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:ankylosaurus",
+      "name": "Ankylosaurus",
+      "size": "huge",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "344",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:ape",
+      "name": "Ape",
+      "size": "medium",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "344",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:archelon",
+      "name": "Archelon",
+      "size": "huge",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "344",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "4",
+      "xp": 1100
+    },
+    {
+      "id": "srd-5.2.1:archmage",
+      "name": "Archmage",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "305",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "12",
+      "xp": 8000,
+      "extensions": {
+        "source_note": "Page 305 explicitly gives 8,000 XP; page 256's general CR 12 table gives 8,400. The stat block is preserved."
+      }
+    },
+    {
+      "id": "srd-5.2.1:assassin",
+      "name": "Assassin",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "260",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "8",
+      "xp": 3900
+    },
+    {
+      "id": "srd-5.2.1:awakened-shrub",
+      "name": "Awakened Shrub",
+      "size": "small",
+      "monster_type": "plant",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "260",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:awakened-tree",
+      "name": "Awakened Tree",
+      "size": "huge",
+      "monster_type": "plant",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "260",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:axe-beak",
+      "name": "Axe Beak",
+      "size": "large",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "260",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:azer-sentinel",
+      "name": "Azer Sentinel",
+      "size": "medium",
+      "monster_type": "elemental",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "261",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:baboon",
+      "name": "Baboon",
+      "size": "small",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "345",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:badger",
+      "name": "Badger",
+      "size": "tiny",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "345",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:balor",
+      "name": "Balor",
+      "size": "huge",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "261",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "19",
+      "xp": 22000
+    },
+    {
+      "id": "srd-5.2.1:bandit",
+      "name": "Bandit",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "261",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/8",
+      "xp": 25
+    },
+    {
+      "id": "srd-5.2.1:bandit-captain",
+      "name": "Bandit Captain",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "261",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:barbed-devil",
+      "name": "Barbed Devil",
+      "size": "medium",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "262",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:basilisk",
+      "name": "Basilisk",
+      "size": "medium",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "262",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:bat",
+      "name": "Bat",
+      "size": "tiny",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "345",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:bearded-devil",
+      "name": "Bearded Devil",
+      "size": "medium",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "262",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:behir",
+      "name": "Behir",
+      "size": "huge",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "263",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "11",
+      "xp": 7200
+    },
+    {
+      "id": "srd-5.2.1:berserker",
+      "name": "Berserker",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "263",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:black-bear",
+      "name": "Black Bear",
+      "size": "medium",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "345",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:black-dragon-wyrmling",
+      "name": "Black Dragon Wyrmling",
+      "size": "medium",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "263",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:black-pudding",
+      "name": "Black Pudding",
+      "size": "large",
+      "monster_type": "ooze",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "265",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "4",
+      "xp": 1100
+    },
+    {
+      "id": "srd-5.2.1:blink-dog",
+      "name": "Blink Dog",
+      "size": "medium",
+      "monster_type": "fey",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "266",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:blood-hawk",
+      "name": "Blood Hawk",
+      "size": "small",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "345",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/8",
+      "xp": 25
+    },
+    {
+      "id": "srd-5.2.1:blue-dragon-wyrmling",
+      "name": "Blue Dragon Wyrmling",
+      "size": "medium",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "266",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:boar",
+      "name": "Boar",
+      "size": "medium",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "346",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:bone-devil",
+      "name": "Bone Devil",
+      "size": "large",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "267",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "9",
+      "xp": 5000
+    },
+    {
+      "id": "srd-5.2.1:brass-dragon-wyrmling",
+      "name": "Brass Dragon Wyrmling",
+      "size": "medium",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "268",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:bronze-dragon-wyrmling",
+      "name": "Bronze Dragon Wyrmling",
+      "size": "medium",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "269",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:brown-bear",
+      "name": "Brown Bear",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "346",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:bugbear-stalker",
+      "name": "Bugbear Stalker",
+      "size": "medium",
+      "monster_type": "fey",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "271",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:bugbear-warrior",
+      "name": "Bugbear Warrior",
+      "size": "medium",
+      "monster_type": "fey",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "272",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:bulette",
+      "name": "Bulette",
+      "size": "large",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "272",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:camel",
+      "name": "Camel",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "346",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/8",
+      "xp": 25
+    },
+    {
+      "id": "srd-5.2.1:cat",
+      "name": "Cat",
+      "size": "tiny",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "346",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:centaur-trooper",
+      "name": "Centaur Trooper",
+      "size": "large",
+      "monster_type": "fey",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "272",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:chain-devil",
+      "name": "Chain Devil",
+      "size": "medium",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "272",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "8",
+      "xp": 3900
+    },
+    {
+      "id": "srd-5.2.1:chimera",
+      "name": "Chimera",
+      "size": "large",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "273",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "6",
+      "xp": 2300
+    },
+    {
+      "id": "srd-5.2.1:chuul",
+      "name": "Chuul",
+      "size": "large",
+      "monster_type": "aberration",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "273",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "4",
+      "xp": 1100
+    },
+    {
+      "id": "srd-5.2.1:clay-golem",
+      "name": "Clay Golem",
+      "size": "large",
+      "monster_type": "construct",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "274",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "9",
+      "xp": 5000
+    },
+    {
+      "id": "srd-5.2.1:cloaker",
+      "name": "Cloaker",
+      "size": "large",
+      "monster_type": "aberration",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "274",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "8",
+      "xp": 3900
+    },
+    {
+      "id": "srd-5.2.1:cloud-giant",
+      "name": "Cloud Giant",
+      "size": "huge",
+      "monster_type": "giant",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "275",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "9",
+      "xp": 5000
+    },
+    {
+      "id": "srd-5.2.1:cockatrice",
+      "name": "Cockatrice",
+      "size": "small",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "275",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:commoner",
+      "name": "Commoner",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "275",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:constrictor-snake",
+      "name": "Constrictor Snake",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "346",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:copper-dragon-wyrmling",
+      "name": "Copper Dragon Wyrmling",
+      "size": "medium",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "275",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:couatl",
+      "name": "Couatl",
+      "size": "medium",
+      "monster_type": "celestial",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "277",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "4",
+      "xp": 1100
+    },
+    {
+      "id": "srd-5.2.1:crab",
+      "name": "Crab",
+      "size": "tiny",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "347",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:crocodile",
+      "name": "Crocodile",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "347",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:cultist",
+      "name": "Cultist",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "278",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/8",
+      "xp": 25
+    },
+    {
+      "id": "srd-5.2.1:cultist-fanatic",
+      "name": "Cultist Fanatic",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "278",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:darkmantle",
+      "name": "Darkmantle",
+      "size": "small",
+      "monster_type": "aberration",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "278",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:death-dog",
+      "name": "Death Dog",
+      "size": "medium",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "279",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:deer",
+      "name": "Deer",
+      "size": "medium",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "347",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:deva",
+      "name": "Deva",
+      "size": "medium",
+      "monster_type": "celestial",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "279",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "10",
+      "xp": 5900
+    },
+    {
+      "id": "srd-5.2.1:dire-wolf",
+      "name": "Dire Wolf",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "347",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:djinni",
+      "name": "Djinni",
+      "size": "large",
+      "monster_type": "elemental",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "280",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "11",
+      "xp": 7200
+    },
+    {
+      "id": "srd-5.2.1:doppelganger",
+      "name": "Doppelganger",
+      "size": "medium",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "280",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:draft-horse",
+      "name": "Draft Horse",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "347",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:dragon-turtle",
+      "name": "Dragon Turtle",
+      "size": "gargantuan",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "281",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "17",
+      "xp": 18000
+    },
+    {
+      "id": "srd-5.2.1:dretch",
+      "name": "Dretch",
+      "size": "small",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "281",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:drider",
+      "name": "Drider",
+      "size": "large",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "281",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "6",
+      "xp": 2300
+    },
+    {
+      "id": "srd-5.2.1:druid",
+      "name": "Druid",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "282",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:dryad",
+      "name": "Dryad",
+      "size": "medium",
+      "monster_type": "fey",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "282",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:dust-mephit",
+      "name": "Dust Mephit",
+      "size": "small",
+      "monster_type": "elemental",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "307",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:eagle",
+      "name": "Eagle",
+      "size": "small",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "348",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:earth-elemental",
+      "name": "Earth Elemental",
+      "size": "large",
+      "monster_type": "elemental",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "282",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:efreeti",
+      "name": "Efreeti",
+      "size": "large",
+      "monster_type": "elemental",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "283",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "11",
+      "xp": 7200
+    },
+    {
+      "id": "srd-5.2.1:elephant",
+      "name": "Elephant",
+      "size": "huge",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "348",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "4",
+      "xp": 1100
+    },
+    {
+      "id": "srd-5.2.1:elk",
+      "name": "Elk",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "348",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:erinyes",
+      "name": "Erinyes",
+      "size": "medium",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "283",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "12",
+      "xp": 8400
+    },
+    {
+      "id": "srd-5.2.1:ettercap",
+      "name": "Ettercap",
+      "size": "medium",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "284",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:ettin",
+      "name": "Ettin",
+      "size": "large",
+      "monster_type": "giant",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "284",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "4",
+      "xp": 1100
+    },
+    {
+      "id": "srd-5.2.1:fire-elemental",
+      "name": "Fire Elemental",
+      "size": "large",
+      "monster_type": "elemental",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "284",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:fire-giant",
+      "name": "Fire Giant",
+      "size": "huge",
+      "monster_type": "giant",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "285",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "9",
+      "xp": 5000
+    },
+    {
+      "id": "srd-5.2.1:flesh-golem",
+      "name": "Flesh Golem",
+      "size": "medium",
+      "monster_type": "construct",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "285",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:flying-snake",
+      "name": "Flying Snake",
+      "size": "tiny",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "348",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/8",
+      "xp": 25
+    },
+    {
+      "id": "srd-5.2.1:frog",
+      "name": "Frog",
+      "size": "tiny",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "348",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:frost-giant",
+      "name": "Frost Giant",
+      "size": "huge",
+      "monster_type": "giant",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "285",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "8",
+      "xp": 3900
+    },
+    {
+      "id": "srd-5.2.1:gargoyle",
+      "name": "Gargoyle",
+      "size": "medium",
+      "monster_type": "elemental",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "286",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:gelatinous-cube",
+      "name": "Gelatinous Cube",
+      "size": "large",
+      "monster_type": "ooze",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "286",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:ghast",
+      "name": "Ghast",
+      "size": "medium",
+      "monster_type": "undead",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "287",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:ghost",
+      "name": "Ghost",
+      "size": "medium",
+      "monster_type": "undead",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "287",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "4",
+      "xp": 1100
+    },
+    {
+      "id": "srd-5.2.1:ghoul",
+      "name": "Ghoul",
+      "size": "medium",
+      "monster_type": "undead",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "288",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:giant-ape",
+      "name": "Giant Ape",
+      "size": "huge",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "349",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "7",
+      "xp": 2900
+    },
+    {
+      "id": "srd-5.2.1:giant-badger",
+      "name": "Giant Badger",
+      "size": "medium",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "349",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:giant-bat",
+      "name": "Giant Bat",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "349",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:giant-boar",
+      "name": "Giant Boar",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "349",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:giant-centipede",
+      "name": "Giant Centipede",
+      "size": "small",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "349",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:giant-constrictor-snake",
+      "name": "Giant Constrictor Snake",
+      "size": "huge",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "350",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:giant-crab",
+      "name": "Giant Crab",
+      "size": "medium",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "350",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/8",
+      "xp": 25
+    },
+    {
+      "id": "srd-5.2.1:giant-crocodile",
+      "name": "Giant Crocodile",
+      "size": "huge",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "350",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:giant-eagle",
+      "name": "Giant Eagle",
+      "size": "large",
+      "monster_type": "celestial",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "350",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:giant-elk",
+      "name": "Giant Elk",
+      "size": "huge",
+      "monster_type": "celestial",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "351",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:giant-fire-beetle",
+      "name": "Giant Fire Beetle",
+      "size": "small",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "351",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:giant-frog",
+      "name": "Giant Frog",
+      "size": "medium",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "351",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:giant-goat",
+      "name": "Giant Goat",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "351",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:giant-hyena",
+      "name": "Giant Hyena",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "352",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:giant-lizard",
+      "name": "Giant Lizard",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "352",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:giant-octopus",
+      "name": "Giant Octopus",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "352",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:giant-owl",
+      "name": "Giant Owl",
+      "size": "large",
+      "monster_type": "celestial",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "352",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:giant-rat",
+      "name": "Giant Rat",
+      "size": "small",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "353",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/8",
+      "xp": 25
+    },
+    {
+      "id": "srd-5.2.1:giant-scorpion",
+      "name": "Giant Scorpion",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "353",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:giant-seahorse",
+      "name": "Giant Seahorse",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "353",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:giant-shark",
+      "name": "Giant Shark",
+      "size": "huge",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "353",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:giant-spider",
+      "name": "Giant Spider",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "353",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:giant-toad",
+      "name": "Giant Toad",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "354",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:giant-venomous-snake",
+      "name": "Giant Venomous Snake",
+      "size": "medium",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "354",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:giant-vulture",
+      "name": "Giant Vulture",
+      "size": "large",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "354",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:giant-wasp",
+      "name": "Giant Wasp",
+      "size": "medium",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "354",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:giant-weasel",
+      "name": "Giant Weasel",
+      "size": "medium",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "355",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/8",
+      "xp": 25
+    },
+    {
+      "id": "srd-5.2.1:giant-wolf-spider",
+      "name": "Giant Wolf Spider",
+      "size": "medium",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "355",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:gibbering-mouther",
+      "name": "Gibbering Mouther",
+      "size": "medium",
+      "monster_type": "aberration",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "288",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:glabrezu",
+      "name": "Glabrezu",
+      "size": "large",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "289",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "9",
+      "xp": 5000
+    },
+    {
+      "id": "srd-5.2.1:gladiator",
+      "name": "Gladiator",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "289",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:gnoll-warrior",
+      "name": "Gnoll Warrior",
+      "size": "medium",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "289",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:goat",
+      "name": "Goat",
+      "size": "medium",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "355",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:goblin-boss",
+      "name": "Goblin Boss",
+      "size": "small",
+      "monster_type": "fey",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "290",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:goblin-minion",
+      "name": "Goblin Minion",
+      "size": "small",
+      "monster_type": "fey",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "290",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/8",
+      "xp": 25
+    },
+    {
+      "id": "srd-5.2.1:goblin-warrior",
+      "name": "Goblin Warrior",
+      "size": "small",
+      "monster_type": "fey",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "290",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:gold-dragon-wyrmling",
+      "name": "Gold Dragon Wyrmling",
+      "size": "medium",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "290",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:gorgon",
+      "name": "Gorgon",
+      "size": "large",
+      "monster_type": "construct",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "292",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:gray-ooze",
+      "name": "Gray Ooze",
+      "size": "medium",
+      "monster_type": "ooze",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "293",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:green-dragon-wyrmling",
+      "name": "Green Dragon Wyrmling",
+      "size": "medium",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "293",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:green-hag",
+      "name": "Green Hag",
+      "size": "medium",
+      "monster_type": "fey",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "295",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:grick",
+      "name": "Grick",
+      "size": "medium",
+      "monster_type": "aberration",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "295",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:griffon",
+      "name": "Griffon",
+      "size": "large",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "295",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:grimlock",
+      "name": "Grimlock",
+      "size": "medium",
+      "monster_type": "aberration",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "296",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:guard",
+      "name": "Guard",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "296",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/8",
+      "xp": 25
+    },
+    {
+      "id": "srd-5.2.1:guard-captain",
+      "name": "Guard Captain",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "296",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "4",
+      "xp": 1100
+    },
+    {
+      "id": "srd-5.2.1:guardian-naga",
+      "name": "Guardian Naga",
+      "size": "large",
+      "monster_type": "celestial",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "296",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "10",
+      "xp": 5900
+    },
+    {
+      "id": "srd-5.2.1:half-dragon",
+      "name": "Half-Dragon",
+      "size": "medium",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "297",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:harpy",
+      "name": "Harpy",
+      "size": "medium",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "297",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:hawk",
+      "name": "Hawk",
+      "size": "tiny",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "355",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:hell-hound",
+      "name": "Hell Hound",
+      "size": "medium",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "297",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:hezrou",
+      "name": "Hezrou",
+      "size": "large",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "298",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "8",
+      "xp": 3900
+    },
+    {
+      "id": "srd-5.2.1:hill-giant",
+      "name": "Hill Giant",
+      "size": "huge",
+      "monster_type": "giant",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "298",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:hippogriff",
+      "name": "Hippogriff",
+      "size": "large",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "298",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:hippopotamus",
+      "name": "Hippopotamus",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "355",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "4",
+      "xp": 1100
+    },
+    {
+      "id": "srd-5.2.1:hobgoblin-captain",
+      "name": "Hobgoblin Captain",
+      "size": "medium",
+      "monster_type": "fey",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "299",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:hobgoblin-warrior",
+      "name": "Hobgoblin Warrior",
+      "size": "medium",
+      "monster_type": "fey",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "298",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:homunculus",
+      "name": "Homunculus",
+      "size": "tiny",
+      "monster_type": "construct",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "299",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:horned-devil",
+      "name": "Horned Devil",
+      "size": "large",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "299",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "11",
+      "xp": 7200
+    },
+    {
+      "id": "srd-5.2.1:hunter-shark",
+      "name": "Hunter Shark",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "356",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:hydra",
+      "name": "Hydra",
+      "size": "huge",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "300",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "8",
+      "xp": 3900
+    },
+    {
+      "id": "srd-5.2.1:hyena",
+      "name": "Hyena",
+      "size": "medium",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "356",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:ice-devil",
+      "name": "Ice Devil",
+      "size": "large",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "300",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "14",
+      "xp": 11500
+    },
+    {
+      "id": "srd-5.2.1:ice-mephit",
+      "name": "Ice Mephit",
+      "size": "small",
+      "monster_type": "elemental",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "307",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:imp",
+      "name": "Imp",
+      "size": "tiny",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "300",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:incubus",
+      "name": "Incubus",
+      "size": "medium",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "301",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "4",
+      "xp": 1100
+    },
+    {
+      "id": "srd-5.2.1:invisible-stalker",
+      "name": "Invisible Stalker",
+      "size": "large",
+      "monster_type": "elemental",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "301",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "6",
+      "xp": 2300
+    },
+    {
+      "id": "srd-5.2.1:iron-golem",
+      "name": "Iron Golem",
+      "size": "large",
+      "monster_type": "construct",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "302",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "16",
+      "xp": 15000
+    },
+    {
+      "id": "srd-5.2.1:jackal",
+      "name": "Jackal",
+      "size": "small",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "356",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:killer-whale",
+      "name": "Killer Whale",
+      "size": "huge",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "356",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:knight",
+      "name": "Knight",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "302",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:kobold-warrior",
+      "name": "Kobold Warrior",
+      "size": "small",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "302",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/8",
+      "xp": 25
+    },
+    {
+      "id": "srd-5.2.1:kraken",
+      "name": "Kraken",
+      "size": "gargantuan",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "303",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "23",
+      "xp": 50000
+    },
+    {
+      "id": "srd-5.2.1:kraken-in-lair",
+      "name": "Kraken (in lair)",
+      "size": "gargantuan",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "303",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "23",
+      "xp": 62000,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:lamia",
+      "name": "Lamia",
+      "size": "large",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "303",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "4",
+      "xp": 1100
+    },
+    {
+      "id": "srd-5.2.1:lemure",
+      "name": "Lemure",
+      "size": "medium",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "304",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:lich",
+      "name": "Lich",
+      "size": "medium",
+      "monster_type": "undead",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "304",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "21",
+      "xp": 33000
+    },
+    {
+      "id": "srd-5.2.1:lich-in-lair",
+      "name": "Lich (in lair)",
+      "size": "medium",
+      "monster_type": "undead",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "304",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "21",
+      "xp": 41000,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:lion",
+      "name": "Lion",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "356",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:lizard",
+      "name": "Lizard",
+      "size": "tiny",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "357",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:mage",
+      "name": "Mage",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "305",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "6",
+      "xp": 2300
+    },
+    {
+      "id": "srd-5.2.1:magma-mephit",
+      "name": "Magma Mephit",
+      "size": "small",
+      "monster_type": "elemental",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "307",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:magmin",
+      "name": "Magmin",
+      "size": "small",
+      "monster_type": "elemental",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "305",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:mammoth",
+      "name": "Mammoth",
+      "size": "huge",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "357",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "6",
+      "xp": 2300
+    },
+    {
+      "id": "srd-5.2.1:manticore",
+      "name": "Manticore",
+      "size": "large",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "306",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:marilith",
+      "name": "Marilith",
+      "size": "large",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "306",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "16",
+      "xp": 15000
+    },
+    {
+      "id": "srd-5.2.1:mastiff",
+      "name": "Mastiff",
+      "size": "medium",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "357",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/8",
+      "xp": 25
+    },
+    {
+      "id": "srd-5.2.1:medusa",
+      "name": "Medusa",
+      "size": "medium",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "306",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "6",
+      "xp": 2300
+    },
+    {
+      "id": "srd-5.2.1:merfolk-skirmisher",
+      "name": "Merfolk Skirmisher",
+      "size": "medium",
+      "monster_type": "elemental",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "308",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/8",
+      "xp": 25
+    },
+    {
+      "id": "srd-5.2.1:merrow",
+      "name": "Merrow",
+      "size": "large",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "308",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:mimic",
+      "name": "Mimic",
+      "size": "medium",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "308",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:minotaur-of-baphomet",
+      "name": "Minotaur of Baphomet",
+      "size": "large",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "309",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:minotaur-skeleton",
+      "name": "Minotaur Skeleton",
+      "size": "large",
+      "monster_type": "undead",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "326",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:mule",
+      "name": "Mule",
+      "size": "medium",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "357",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/8",
+      "xp": 25
+    },
+    {
+      "id": "srd-5.2.1:mummy",
+      "name": "Mummy",
+      "size": "medium or small",
+      "monster_type": "undead",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "309",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:mummy-lord",
+      "name": "Mummy Lord",
+      "size": "medium or small",
+      "monster_type": "undead",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "309",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "15",
+      "xp": 13000
+    },
+    {
+      "id": "srd-5.2.1:mummy-lord-in-lair",
+      "name": "Mummy Lord (in lair)",
+      "size": "medium or small",
+      "monster_type": "undead",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "309",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "15",
+      "xp": 15000,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:nalfeshnee",
+      "name": "Nalfeshnee",
+      "size": "large",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "310",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "13",
+      "xp": 10000
+    },
+    {
+      "id": "srd-5.2.1:night-hag",
+      "name": "Night Hag",
+      "size": "medium",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "311",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:nightmare",
+      "name": "Nightmare",
+      "size": "large",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "311",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:noble",
+      "name": "Noble",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "312",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/8",
+      "xp": 25
+    },
+    {
+      "id": "srd-5.2.1:ochre-jelly",
+      "name": "Ochre Jelly",
+      "size": "large",
+      "monster_type": "ooze",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "312",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:octopus",
+      "name": "Octopus",
+      "size": "small",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "357",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:ogre",
+      "name": "Ogre",
+      "size": "large",
+      "monster_type": "giant",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "312",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:ogre-zombie",
+      "name": "Ogre Zombie",
+      "size": "large",
+      "monster_type": "undead",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "344",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:oni",
+      "name": "Oni",
+      "size": "large",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "312",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "7",
+      "xp": 2900
+    },
+    {
+      "id": "srd-5.2.1:otyugh",
+      "name": "Otyugh",
+      "size": "large",
+      "monster_type": "aberration",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "313",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:owl",
+      "name": "Owl",
+      "size": "tiny",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "358",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:owlbear",
+      "name": "Owlbear",
+      "size": "large",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "313",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:panther",
+      "name": "Panther",
+      "size": "medium",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "358",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:pegasus",
+      "name": "Pegasus",
+      "size": "large",
+      "monster_type": "celestial",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "313",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:phase-spider",
+      "name": "Phase Spider",
+      "size": "large",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "313",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:piranha",
+      "name": "Piranha",
+      "size": "tiny",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "358",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:pirate",
+      "name": "Pirate",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "314",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:pirate-captain",
+      "name": "Pirate Captain",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "314",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "6",
+      "xp": 2300
+    },
+    {
+      "id": "srd-5.2.1:pit-fiend",
+      "name": "Pit Fiend",
+      "size": "large",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "314",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "20",
+      "xp": 25000
+    },
+    {
+      "id": "srd-5.2.1:planetar",
+      "name": "Planetar",
+      "size": "large",
+      "monster_type": "celestial",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "315",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "16",
+      "xp": 15000
+    },
+    {
+      "id": "srd-5.2.1:plesiosaurus",
+      "name": "Plesiosaurus",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "358",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:polar-bear",
+      "name": "Polar Bear",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "359",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:pony",
+      "name": "Pony",
+      "size": "medium",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "359",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/8",
+      "xp": 25
+    },
+    {
+      "id": "srd-5.2.1:priest",
+      "name": "Priest",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "316",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:priest-acolyte",
+      "name": "Priest Acolyte",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "316",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:pseudodragon",
+      "name": "Pseudodragon",
+      "size": "tiny",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "316",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:pteranodon",
+      "name": "Pteranodon",
+      "size": "medium",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "359",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:purple-worm",
+      "name": "Purple Worm",
+      "size": "gargantuan",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "316",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "15",
+      "xp": 13000
+    },
+    {
+      "id": "srd-5.2.1:quasit",
+      "name": "Quasit",
+      "size": "tiny",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "317",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:rakshasa",
+      "name": "Rakshasa",
+      "size": "medium",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "317",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "13",
+      "xp": 10000
+    },
+    {
+      "id": "srd-5.2.1:rat",
+      "name": "Rat",
+      "size": "tiny",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "359",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:raven",
+      "name": "Raven",
+      "size": "tiny",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "359",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:red-dragon-wyrmling",
+      "name": "Red Dragon Wyrmling",
+      "size": "medium",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "318",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "4",
+      "xp": 1100
+    },
+    {
+      "id": "srd-5.2.1:reef-shark",
+      "name": "Reef Shark",
+      "size": "medium",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "360",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:remorhaz",
+      "name": "Remorhaz",
+      "size": "huge",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "319",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "11",
+      "xp": 7200
+    },
+    {
+      "id": "srd-5.2.1:rhinoceros",
+      "name": "Rhinoceros",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "360",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:riding-horse",
+      "name": "Riding Horse",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "360",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:roc",
+      "name": "Roc",
+      "size": "gargantuan",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "320",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "11",
+      "xp": 7200
+    },
+    {
+      "id": "srd-5.2.1:roper",
+      "name": "Roper",
+      "size": "large",
+      "monster_type": "aberration",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "320",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:rust-monster",
+      "name": "Rust Monster",
+      "size": "medium",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "320",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:saber-toothed-tiger",
+      "name": "Saber-Toothed Tiger",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "360",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:sahuagin-warrior",
+      "name": "Sahuagin Warrior",
+      "size": "medium",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "321",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:salamander",
+      "name": "Salamander",
+      "size": "large",
+      "monster_type": "elemental",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "321",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:satyr",
+      "name": "Satyr",
+      "size": "medium",
+      "monster_type": "fey",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "321",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:scorpion",
+      "name": "Scorpion",
+      "size": "tiny",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "360",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:scout",
+      "name": "Scout",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "322",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:sea-hag",
+      "name": "Sea Hag",
+      "size": "medium",
+      "monster_type": "fey",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "322",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:seahorse",
+      "name": "Seahorse",
+      "size": "tiny",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "361",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 0
+    },
+    {
+      "id": "srd-5.2.1:shadow",
+      "name": "Shadow",
+      "size": "medium",
+      "monster_type": "undead",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "322",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:shambling-mound",
+      "name": "Shambling Mound",
+      "size": "large",
+      "monster_type": "plant",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "323",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:shield-guardian",
+      "name": "Shield Guardian",
+      "size": "large",
+      "monster_type": "construct",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "323",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "7",
+      "xp": 2900
+    },
+    {
+      "id": "srd-5.2.1:shrieker-fungus",
+      "name": "Shrieker Fungus",
+      "size": "medium",
+      "monster_type": "plant",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "286",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 0
+    },
+    {
+      "id": "srd-5.2.1:silver-dragon-wyrmling",
+      "name": "Silver Dragon Wyrmling",
+      "size": "medium",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "324",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:skeleton",
+      "name": "Skeleton",
+      "size": "medium",
+      "monster_type": "undead",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "325",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:solar",
+      "name": "Solar",
+      "size": "large",
+      "monster_type": "celestial",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "326",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "21",
+      "xp": 33000
+    },
+    {
+      "id": "srd-5.2.1:specter",
+      "name": "Specter",
+      "size": "medium",
+      "monster_type": "undead",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "327",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:sphinx-of-lore",
+      "name": "Sphinx of Lore",
+      "size": "large",
+      "monster_type": "celestial",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "327",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "11",
+      "xp": 7200
+    },
+    {
+      "id": "srd-5.2.1:sphinx-of-lore-in-lair",
+      "name": "Sphinx of Lore (in lair)",
+      "size": "large",
+      "monster_type": "celestial",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "327",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "11",
+      "xp": 8400,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:sphinx-of-valor",
+      "name": "Sphinx of Valor",
+      "size": "large",
+      "monster_type": "celestial",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "328",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "17",
+      "xp": 18000
+    },
+    {
+      "id": "srd-5.2.1:sphinx-of-valor-in-lair",
+      "name": "Sphinx of Valor (in lair)",
+      "size": "large",
+      "monster_type": "celestial",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "328",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "17",
+      "xp": 20000,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:sphinx-of-wonder",
+      "name": "Sphinx of Wonder",
+      "size": "tiny",
+      "monster_type": "celestial",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "327",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:spider",
+      "name": "Spider",
+      "size": "tiny",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "361",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:spirit-naga",
+      "name": "Spirit Naga",
+      "size": "large",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "329",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "8",
+      "xp": 3900
+    },
+    {
+      "id": "srd-5.2.1:sprite",
+      "name": "Sprite",
+      "size": "tiny",
+      "monster_type": "fey",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "329",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:spy",
+      "name": "Spy",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "329",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:steam-mephit",
+      "name": "Steam Mephit",
+      "size": "small",
+      "monster_type": "elemental",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "308",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:stirge",
+      "name": "Stirge",
+      "size": "tiny",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "329",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/8",
+      "xp": 25
+    },
+    {
+      "id": "srd-5.2.1:stone-giant",
+      "name": "Stone Giant",
+      "size": "huge",
+      "monster_type": "giant",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "330",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "7",
+      "xp": 2900
+    },
+    {
+      "id": "srd-5.2.1:stone-golem",
+      "name": "Stone Golem",
+      "size": "large",
+      "monster_type": "construct",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "330",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "10",
+      "xp": 5900
+    },
+    {
+      "id": "srd-5.2.1:storm-giant",
+      "name": "Storm Giant",
+      "size": "huge",
+      "monster_type": "giant",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "330",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "13",
+      "xp": 10000
+    },
+    {
+      "id": "srd-5.2.1:succubus",
+      "name": "Succubus",
+      "size": "medium",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "331",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "4",
+      "xp": 1100
+    },
+    {
+      "id": "srd-5.2.1:swarm-of-bats",
+      "name": "Swarm of Bats",
+      "size": "large swarm of tiny",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "361",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:swarm-of-crawling-claws",
+      "name": "Swarm of Crawling Claws",
+      "size": "medium swarm of tiny",
+      "monster_type": "undead",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "278",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:swarm-of-insects",
+      "name": "Swarm of Insects",
+      "size": "medium swarm of tiny",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "361",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:swarm-of-piranhas",
+      "name": "Swarm of Piranhas",
+      "size": "medium swarm of tiny",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "362",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:swarm-of-rats",
+      "name": "Swarm of Rats",
+      "size": "medium swarm of tiny",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "362",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:swarm-of-ravens",
+      "name": "Swarm of Ravens",
+      "size": "medium swarm of tiny",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "362",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:swarm-of-venomous-snakes",
+      "name": "Swarm of Venomous Snakes",
+      "size": "medium swarm of tiny",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "362",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:tarrasque",
+      "name": "Tarrasque",
+      "size": "gargantuan",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "331",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "30",
+      "xp": 155000
+    },
+    {
+      "id": "srd-5.2.1:tiger",
+      "name": "Tiger",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "363",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1",
+      "xp": 200
+    },
+    {
+      "id": "srd-5.2.1:tough",
+      "name": "Tough",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "332",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:tough-boss",
+      "name": "Tough Boss",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "332",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "4",
+      "xp": 1100
+    },
+    {
+      "id": "srd-5.2.1:treant",
+      "name": "Treant",
+      "size": "huge",
+      "monster_type": "plant",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "333",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "9",
+      "xp": 5000
+    },
+    {
+      "id": "srd-5.2.1:triceratops",
+      "name": "Triceratops",
+      "size": "huge",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "363",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:troll",
+      "name": "Troll",
+      "size": "large",
+      "monster_type": "giant",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "333",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:troll-limb",
+      "name": "Troll Limb",
+      "size": "small",
+      "monster_type": "giant",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "333",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:tyrannosaurus-rex",
+      "name": "Tyrannosaurus Rex",
+      "size": "huge",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "363",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "8",
+      "xp": 3900
+    },
+    {
+      "id": "srd-5.2.1:unicorn",
+      "name": "Unicorn",
+      "size": "large",
+      "monster_type": "celestial",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "334",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:vampire",
+      "name": "Vampire",
+      "size": "medium or small",
+      "monster_type": "undead",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "335",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "13",
+      "xp": 10000
+    },
+    {
+      "id": "srd-5.2.1:vampire-familiar",
+      "name": "Vampire Familiar",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "334",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:vampire-in-lair",
+      "name": "Vampire (in lair)",
+      "size": "medium or small",
+      "monster_type": "undead",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "335",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "13",
+      "xp": 11500,
+      "tags": [
+        "in-lair"
+      ]
+    },
+    {
+      "id": "srd-5.2.1:vampire-spawn",
+      "name": "Vampire Spawn",
+      "size": "medium or small",
+      "monster_type": "undead",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "334",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:venomous-snake",
+      "name": "Venomous Snake",
+      "size": "tiny",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "363",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/8",
+      "xp": 25
+    },
+    {
+      "id": "srd-5.2.1:violet-fungus",
+      "name": "Violet Fungus",
+      "size": "medium",
+      "monster_type": "plant",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "286",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:vrock",
+      "name": "Vrock",
+      "size": "large",
+      "monster_type": "fiend",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "336",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "6",
+      "xp": 2300
+    },
+    {
+      "id": "srd-5.2.1:vulture",
+      "name": "Vulture",
+      "size": "medium",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "363",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:warhorse",
+      "name": "Warhorse",
+      "size": "large",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "364",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:warhorse-skeleton",
+      "name": "Warhorse Skeleton",
+      "size": "large",
+      "monster_type": "undead",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "326",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:warrior-infantry",
+      "name": "Warrior Infantry",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "336",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/8",
+      "xp": 25
+    },
+    {
+      "id": "srd-5.2.1:warrior-veteran",
+      "name": "Warrior Veteran",
+      "size": "medium or small",
+      "monster_type": "humanoid",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "337",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:water-elemental",
+      "name": "Water Elemental",
+      "size": "large",
+      "monster_type": "elemental",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "337",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:weasel",
+      "name": "Weasel",
+      "size": "tiny",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "364",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "0",
+      "xp": 10
+    },
+    {
+      "id": "srd-5.2.1:werebear",
+      "name": "Werebear",
+      "size": "medium or small",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "337",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:wereboar",
+      "name": "Wereboar",
+      "size": "medium or small",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "338",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "4",
+      "xp": 1100
+    },
+    {
+      "id": "srd-5.2.1:wererat",
+      "name": "Wererat",
+      "size": "medium or small",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "338",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:weretiger",
+      "name": "Weretiger",
+      "size": "medium or small",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "339",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "4",
+      "xp": 1100
+    },
+    {
+      "id": "srd-5.2.1:werewolf",
+      "name": "Werewolf",
+      "size": "medium or small",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "339",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:white-dragon-wyrmling",
+      "name": "White Dragon Wyrmling",
+      "size": "medium",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "339",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:wight",
+      "name": "Wight",
+      "size": "medium",
+      "monster_type": "undead",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "341",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:will-o-wisp",
+      "name": "Will-o’-Wisp",
+      "size": "tiny",
+      "monster_type": "undead",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "341",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "2",
+      "xp": 450
+    },
+    {
+      "id": "srd-5.2.1:winter-wolf",
+      "name": "Winter Wolf",
+      "size": "large",
+      "monster_type": "monstrosity",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "342",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "3",
+      "xp": 700
+    },
+    {
+      "id": "srd-5.2.1:wolf",
+      "name": "Wolf",
+      "size": "medium",
+      "monster_type": "beast",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "364",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    },
+    {
+      "id": "srd-5.2.1:worg",
+      "name": "Worg",
+      "size": "large",
+      "monster_type": "fey",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "342",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/2",
+      "xp": 100
+    },
+    {
+      "id": "srd-5.2.1:wraith",
+      "name": "Wraith",
+      "size": "medium or small",
+      "monster_type": "undead",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "342",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:wyvern",
+      "name": "Wyvern",
+      "size": "large",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "343",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "6",
+      "xp": 2300
+    },
+    {
+      "id": "srd-5.2.1:xorn",
+      "name": "Xorn",
+      "size": "medium",
+      "monster_type": "elemental",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "343",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "5",
+      "xp": 1800
+    },
+    {
+      "id": "srd-5.2.1:young-black-dragon",
+      "name": "Young Black Dragon",
+      "size": "large",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "264",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "7",
+      "xp": 2900
+    },
+    {
+      "id": "srd-5.2.1:young-blue-dragon",
+      "name": "Young Blue Dragon",
+      "size": "large",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "266",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "9",
+      "xp": 5000
+    },
+    {
+      "id": "srd-5.2.1:young-brass-dragon",
+      "name": "Young Brass Dragon",
+      "size": "large",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "268",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "6",
+      "xp": 2300
+    },
+    {
+      "id": "srd-5.2.1:young-bronze-dragon",
+      "name": "Young Bronze Dragon",
+      "size": "large",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "270",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "8",
+      "xp": 3900
+    },
+    {
+      "id": "srd-5.2.1:young-copper-dragon",
+      "name": "Young Copper Dragon",
+      "size": "large",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "276",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "7",
+      "xp": 2900
+    },
+    {
+      "id": "srd-5.2.1:young-gold-dragon",
+      "name": "Young Gold Dragon",
+      "size": "large",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "291",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "10",
+      "xp": 5900
+    },
+    {
+      "id": "srd-5.2.1:young-green-dragon",
+      "name": "Young Green Dragon",
+      "size": "large",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "293",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "8",
+      "xp": 3900
+    },
+    {
+      "id": "srd-5.2.1:young-red-dragon",
+      "name": "Young Red Dragon",
+      "size": "large",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "318",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "10",
+      "xp": 5900
+    },
+    {
+      "id": "srd-5.2.1:young-silver-dragon",
+      "name": "Young Silver Dragon",
+      "size": "large",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "324",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "9",
+      "xp": 5000
+    },
+    {
+      "id": "srd-5.2.1:young-white-dragon",
+      "name": "Young White Dragon",
+      "size": "large",
+      "monster_type": "dragon",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "340",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "6",
+      "xp": 2300
+    },
+    {
+      "id": "srd-5.2.1:zombie",
+      "name": "Zombie",
+      "size": "medium",
+      "monster_type": "undead",
+      "rules_revision": "2024",
+      "references": [
+        {
+          "publication": "SRD 5.2.1",
+          "page": "343",
+          "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+        }
+      ],
+      "challenge_rating": "1/4",
+      "xp": 50
+    }
+  ]
+}

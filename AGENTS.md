@@ -4,7 +4,10 @@
 
 Offline Python command-line random encounter generator for the 2024 revised
 fifth-edition rules. Python 3.12+; continuous checks target 3.12–3.15. No
-third-party runtime dependencies. Development tools are in `.[dev]`.
+third-party runtime dependencies. uv manages development through
+`[dependency-groups].dev` and the committed `uv.lock`; there is no `dev` extra.
+Use uv 0.13.7 (the automated version). `.python-version` selects the Python 3.12
+contributor baseline, not a narrower runtime support range.
 
 The source package and distribution are `dnd_encounter_generator`, matching the
 repository. The former `dnd_5e_encounter_gen` import/module path is retired; the
@@ -37,36 +40,54 @@ lookups, smoke checks, and documentation aligned with the new package name.
   with release-version comments and retain distinct matrix check names.
 - `pyproject.toml`: packaging, supported Python, development dependencies, lint
   and coverage. `setup.py` is only a shim; version is in `__init__.py`.
+- `uv.lock`: committed universal development dependency lockfile.
+- `.python-version`: local development interpreter default; automation explicitly
+  selects each matrix interpreter.
 
 ## Running and validation
 
-From the repository root:
+Install uv first, then run `uv sync --locked` from the repository root.
+uv manages `.venv` and installs the project editable; no activation is required.
+Exact synchronization can remove manually installed packages; preserve unrelated
+user environments rather than deleting them.
 
 ```fish
-python3 -B -m dnd_encounter_generator
-python3 -B -m dnd_encounter_generator --party-size 4 --level 5 --seed 42
-python3 -B dnd_encounter_generator/random_encounter_builder.py
-python3 -B -m dnd_encounter_generator --validate-catalog
-printf '4\n5\n\n\nn\n' | python3 -B -m dnd_encounter_generator
+uv run --locked dnd-encounter
+uv run --locked python -B -m dnd_encounter_generator --party-size 4 --level 5 --seed 42
+uv run --locked python -B dnd_encounter_generator/random_encounter_builder.py
+uv run --locked dnd-encounter --validate-catalog
+printf '4\n5\n\n\nn\n' | uv run --locked dnd-encounter
 ```
 
 Installed command: `dnd-encounter`. Package-relative imports and resource loading
 must work outside the checkout. Do not reintroduce bare sibling imports.
 
-Use a virtual environment; never install into a managed system Python:
+Plain `python3 -B -m dnd_encounter_generator` and direct-script execution remain
+supported without uv. Never install into a managed system Python.
+Use the locked development environment for validation:
 
 ```fish
-python3 -m venv .venv
-.venv/bin/python -m pip install -e '.[dev]'
-.venv/bin/python -B -m unittest discover -s tests -v
-.venv/bin/python -B -m unittest discover -s tests/smoke -v
-.venv/bin/python -B -m coverage run -m unittest discover -s tests -v
-.venv/bin/python -B -m coverage report
-.venv/bin/ruff check .
-.venv/bin/python -m build
-.venv/bin/python -B tools/check_distribution.py dist/*.whl dist/*.tar.gz
+uv sync --locked
+uv lock --check
+uv run --locked python -B -m unittest discover -s tests -v
+uv run --locked python -B -m unittest discover -s tests/smoke -v
+uv run --locked python -B -m coverage run -m unittest discover -s tests -v
+uv run --locked python -B -m coverage report
+uv run --locked ruff check .
+uv build
+uv run --locked python -B tools/check_distribution.py dist/*.whl dist/*.tar.gz
 git diff --check
 ```
+
+Add development dependencies with `uv add --dev PACKAGE`; use `uv lock` after
+intentional metadata edits and `uv lock --upgrade-package NAME` for targeted
+upgrades. Review and commit lockfile changes together with dependency changes.
+Ordinary validation must use `--locked`, not silently regenerate the lockfile.
+The lock covers development dependencies, not separately resolved isolated
+setuptools build requirements. Do not claim builds are fully locked or offline.
+Keep the artifact checker's pip installs in clean temporary environments as an
+independent compatibility check for users without uv; do not replace them with
+editable project installs. uv must not become a runtime dependency.
 
 Default discovery includes smoke tests. Subprocesses must have timeouts. Tests
 must control randomness or assert invariants rather than exact unseeded results.

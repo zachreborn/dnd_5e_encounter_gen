@@ -46,18 +46,29 @@ and action economy still affect danger. Budget guidance is not a balance guarant
 The initial generator uses one creature stat block per encounter; mixed groups
 and location filtering are not implemented.
 
-## Run without installing
+## Run with uv
+
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/) first.
+The automated workflow uses uv **0.13.7**. The committed `.python-version`
+selects Python 3.12 for development; supported Python versions remain 3.12+.
 
 From the repository root:
 
 ```fish
-python3 -B -m dnd_encounter_generator
+uv sync --locked
+uv run --locked dnd-encounter
 ```
 
-Direct script execution is also available under the renamed package:
+uv creates and manages the isolated `.venv` and installs the project in editable
+mode; activation is not required. Development tools are included by default.
+Synchronization is exact and can remove manually installed packages from that
+environment. Do not reuse an environment containing unrelated work.
+
+Module and direct script execution are also available:
 
 ```fish
-python3 -B dnd_encounter_generator/random_encounter_builder.py
+uv run --locked python -B -m dnd_encounter_generator
+uv run --locked python -B dnd_encounter_generator/random_encounter_builder.py
 ```
 
 Interactive mode prompts for party size, average level (1–20), difficulty, and
@@ -67,7 +78,7 @@ reuses party settings and advances the random generator.
 For a single noninteractive encounter:
 
 ```fish
-python3 -B -m dnd_encounter_generator --party-size 4 --level 5 --difficulty moderate --type undead --seed 42
+uv run --locked dnd-encounter --party-size 4 --level 5 --difficulty moderate --type undead --seed 42
 ```
 
 Supply `--party-size` and `--level` together. `--seed` reproduces a sequence for
@@ -77,14 +88,23 @@ version; it is not a permanent cross-version encounter identifier.
 Exit codes: `0` for success or clean end-of-input, `2` for bad arguments,
 catalogs, or an impossible encounter, and `130` for interruption.
 
-## Install locally
+## Run without uv
 
-Use an isolated environment, not a system Python install:
+uv is a development tool, not a runtime requirement. From the repository root,
+plain Python execution still works without installation or third-party packages:
 
 ```fish
-python3 -m venv .venv
-.venv/bin/python -m pip install .
-.venv/bin/dnd-encounter --party-size 4 --level 5
+python3 -B -m dnd_encounter_generator
+python3 -B dnd_encounter_generator/random_encounter_builder.py
+```
+
+Standard installation is also supported. Use a separate isolated environment,
+not a system Python install or the uv-managed development environment:
+
+```fish
+python3 -m venv /absolute/path/to/encounter-venv
+/absolute/path/to/encounter-venv/bin/python -m pip install .
+/absolute/path/to/encounter-venv/bin/dnd-encounter --party-size 4 --level 5
 ```
 
 After activation, the installed command is `dnd-encounter`. The installed module
@@ -133,7 +153,7 @@ changing encounter generation.
 Validate a pack without starting an encounter:
 
 ```fish
-python3 -B -m dnd_encounter_generator --no-default-catalog --catalog examples/homebrew.json --validate-catalog
+uv run --locked dnd-encounter --no-default-catalog --catalog examples/homebrew.json --validate-catalog
 ```
 
 To add a pack to the open default catalog, use `--catalog PATH`. Repeat that
@@ -165,8 +185,8 @@ From a repository checkout, migrate it into a private location outside the
 repository:
 
 ```fish
-python3 -B tools/migrate_legacy.py legacy/monsters.py /absolute/private/path/legacy.json
-python3 -B -m dnd_encounter_generator --no-default-catalog --catalog /absolute/private/path/legacy.json --validate-catalog
+uv run --locked python -B tools/migrate_legacy.py legacy/monsters.py /absolute/private/path/legacy.json
+uv run --locked dnd-encounter --no-default-catalog --catalog /absolute/private/path/legacy.json --validate-catalog
 ```
 
 The destination must not already exist. The converter reads literal dictionary
@@ -199,7 +219,7 @@ To reproduce extraction, obtain the version-pinned PDF from the official
 [SRD page](https://www.dndbeyond.com/srd), install Poppler's `pdftotext`, then run:
 
 ```fish
-python3 -B tools/extract_srd.py /path/to/SRD_CC_v5.2.1.pdf dnd_encounter_generator/data/srd_5_2_1.json --index-manifest tests/fixtures/srd_index.json
+uv run --locked python -B tools/extract_srd.py /path/to/SRD_CC_v5.2.1.pdf dnd_encounter_generator/data/srd_5_2_1.json --index-manifest tests/fixtures/srd_index.json
 ```
 
 PDF tooling is development-only. Review source changes and catalog diffs before
@@ -213,30 +233,47 @@ and generated catalog/index files explicitly use UTF-8, independent of locale.
 ## Development and validation
 
 ```fish
-.venv/bin/python -m pip install -e '.[dev]'
-.venv/bin/python -B -m unittest discover -s tests -v
-.venv/bin/python -B -m unittest discover -s tests/smoke -v
-.venv/bin/python -B -m coverage run -m unittest discover -s tests -v
-.venv/bin/python -B -m coverage report
-.venv/bin/ruff check .
-.venv/bin/python -m build
-.venv/bin/python -B tools/check_distribution.py dist/*.whl dist/*.tar.gz
+uv sync --locked
+uv lock --check
+uv run --locked python -B -m unittest discover -s tests -v
+uv run --locked python -B -m unittest discover -s tests/smoke -v
+uv run --locked python -B -m coverage run -m unittest discover -s tests -v
+uv run --locked python -B -m coverage report
+uv run --locked ruff check .
+uv build
+uv run --locked python -B tools/check_distribution.py dist/*.whl dist/*.tar.gz
 git diff --check
 ```
+
+Development dependencies live in `[dependency-groups].dev`, not a published
+`dev` extra. `uv sync --locked` replaces `pip install -e '.[dev]'`.
+Commit `uv.lock` with dependency changes; `--locked` rejects stale metadata
+rather than silently rewriting the lockfile. Add development tools with
+`uv add --dev PACKAGE`, regenerate after deliberate metadata edits with
+`uv lock`, and upgrade selectively with `uv lock --upgrade-package NAME`.
+Review dependency and lockfile changes, then rerun validation before sharing.
+Use `uv sync --locked --no-dev` for a project-only environment; a normal
+`uv sync --locked` restores development tools.
 
 The default test discovery includes the smoke suite; its separate command is
 useful during focused checks. Standard-library tests run without development
 dependencies, except that the full-schema parity check is skipped unless
 `jsonschema` is installed. Coverage enforces a 90% floor with branch measurement.
-The artifact checker installs both build formats in clean temporary environments,
+The artifact checker deliberately retains standard-library virtual environments
+and pip to verify compatibility for users without uv. It installs both build
+formats in clean temporary environments,
 runs from outside the checkout, verifies notices and bundled data, exercises
 custom packs, and tests runtime generation with socket creation blocked.
 Build/install steps may access a package index for build tools; runtime needs
-no network.
+no network. `uv.lock` locks the development environment, not separately resolved
+isolated setuptools build requirements or source-artifact installation tools.
+Builds are not guaranteed to be fully locked or offline.
 
 GitHub Actions runs unit, catalog, smoke, lint, coverage, build, and installed-
 artifact checks on Linux with Python 3.12–3.15 and on macOS with Python 3.15.
 Development-only dependencies do not become runtime requirements.
+Each automated job explicitly selects its matrix interpreter, overriding the
+local `.python-version` default.
 
 ## Licensing
 

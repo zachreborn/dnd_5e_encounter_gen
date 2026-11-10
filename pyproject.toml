@@ -17,8 +17,8 @@ Repository = "https://github.com/zachreborn/dnd_encounter_generator"
 [project.scripts]
 dnd-encounter = "dnd_encounter_generator.cli:main"
 
-[project.optional-dependencies]
-dev = ["build>=1.2,<2", "coverage>=7.6,<8", "ruff>=0.9,<1", "jsonschema>=4.23,<5"]
+[dependency-groups]
+dev = ["coverage>=7.6,<8", "ruff>=0.9,<1", "jsonschema>=4.23,<5"]
 
 [tool.setuptools]
 packages = ["dnd_encounter_generator", "dnd_encounter_generator.data"]

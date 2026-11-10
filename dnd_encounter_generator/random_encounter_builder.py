@@ -1,4 +1,4 @@
-"""Compatibility launcher for direct execution from older installations."""
+"""Direct-script launcher for the encounter generator."""
 
 if __package__:
     from .cli import main
@@ -7,7 +7,7 @@ else:
     from pathlib import Path
 
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-    from dnd_5e_encounter_gen.cli import main
+    from dnd_encounter_generator.cli import main
 
 
 if __name__ == "__main__":

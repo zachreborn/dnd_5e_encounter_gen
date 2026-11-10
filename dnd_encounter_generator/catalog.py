@@ -47,7 +47,7 @@ class Monster:
 
 
 def catalog_schema():
-    resource = files("dnd_5e_encounter_gen").joinpath("data/catalog.schema.json")
+    resource = files("dnd_encounter_generator").joinpath("data/catalog.schema.json")
     return json.loads(resource.read_text(encoding="utf-8"))
 
 
@@ -150,7 +150,7 @@ def load_catalog(path):
 
 
 def load_default():
-    resource = files("dnd_5e_encounter_gen").joinpath("data/srd_5_2_1.json")
+    resource = files("dnd_encounter_generator").joinpath("data/srd_5_2_1.json")
     return parse_catalog(resource.read_text(encoding="utf-8"), "bundled SRD 5.2.1")
 
 

@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from dnd_5e_encounter_gen.catalog import merge_catalogs, parse_catalog
+from dnd_encounter_generator.catalog import merge_catalogs, parse_catalog
 from tools.migrate_legacy import convert
 
 ROOT = Path(__file__).resolve().parents[1]

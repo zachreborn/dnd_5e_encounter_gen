@@ -7,7 +7,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from dnd_5e_encounter_gen.catalog import (
+from dnd_encounter_generator.catalog import (
     CatalogError,
     _validate,
     catalog_schema,
@@ -17,8 +17,8 @@ from dnd_5e_encounter_gen.catalog import (
     merge_catalogs,
     parse_catalog,
 )
-from dnd_5e_encounter_gen.cli import display
-from dnd_5e_encounter_gen.engine import generate_encounter
+from dnd_encounter_generator.cli import display
+from dnd_encounter_generator.engine import generate_encounter
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -128,7 +128,7 @@ class CatalogTests(unittest.TestCase):
             replaced.extensions["new"] = "value"
 
     def test_metadata_freezing_depth_errors_are_reported(self):
-        with patch("dnd_5e_encounter_gen.catalog._freeze", side_effect=RecursionError("too deep")):
+        with patch("dnd_encounter_generator.catalog._freeze", side_effect=RecursionError("too deep")):
             with self.assertRaisesRegex(CatalogError, "homebrew:moss-guardian.*nested too deeply"):
                 merge_catalogs([self.example])
 
@@ -181,12 +181,12 @@ class CatalogTests(unittest.TestCase):
                 parse_catalog(text, "bad.json")
 
     def test_recursion_error_is_reported(self):
-        with patch("dnd_5e_encounter_gen.catalog.json.loads", side_effect=RecursionError("too deep")):
+        with patch("dnd_encounter_generator.catalog.json.loads", side_effect=RecursionError("too deep")):
             with self.assertRaises(CatalogError):
                 parse_catalog("[]")
 
     def test_oversized_catalog_and_integer_are_reported(self):
-        with patch("dnd_5e_encounter_gen.catalog.MAX_CATALOG_CHARACTERS", 5):
+        with patch("dnd_encounter_generator.catalog.MAX_CATALOG_CHARACTERS", 5):
             with self.assertRaisesRegex(CatalogError, "limit"):
                 parse_catalog(" " * 6)
         # Python's integer-token safety limit must not become a CLI traceback.
